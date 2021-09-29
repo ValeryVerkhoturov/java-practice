@@ -1,7 +1,5 @@
 package com.company.practice2;
 
-import java.util.Random;
-
 public class Factory {
     public static Weapon createDefaultWeapon(){
         return new Weapon("Unnamed weapon", 0, 0, 0);
