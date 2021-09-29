@@ -20,4 +20,12 @@ public class Weapon extends Item{
     protected void setAttackPower(int attackPower) {
         this.attackPower = attackPower;
     }
+
+    public int getRequiredLevel() {
+        return requiredLevel;
+    }
+
+    protected void setRequiredLevel(int requiredLevel) {
+        this.requiredLevel = requiredLevel;
+    }
 }

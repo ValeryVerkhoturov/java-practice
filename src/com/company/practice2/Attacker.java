@@ -1,6 +1,6 @@
 package com.company.practice2;
 
-public abstract class Attacker extends Creature {
+abstract class Attacker extends Creature {
     protected Weapon weapon;
 
     public Attacker(String name, int hp, int attackPower, int protectionLevel, Weapon weapon) {
