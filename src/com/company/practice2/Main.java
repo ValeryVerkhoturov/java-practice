@@ -2,6 +2,8 @@ package com.company.practice2;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -13,6 +15,8 @@ public class Main {
             enemies.add(Factory.createRandomEnemy());
             characters.add(Factory.createRandomCharacter());
         }
+
+        // Общая статистика до боя
         int sumEnemiesDPS = enemies.stream().mapToInt(eneny -> GameLogic.countDPS(eneny.attack())).sum();
         double averageEnemiesDPS = enemies.stream().mapToInt(eneny -> GameLogic.countDPS(eneny.attack())).average().getAsDouble();
         int sumEnemiesHp = enemies.stream().mapToInt(Creature::getHp).sum();
@@ -24,20 +28,31 @@ public class Main {
         System.out.printf("Персонажи\tСуммарный DPS: %d\tСредний DPS: %.2f\tСуммарное HP: %d\n",
                 sumCharactersDPS, averageCharactersDPS, sumCharactersHp);
         System.out.println("________________");
-        while(characters.stream().anyMatch(character -> character.getHp() > 0) &&
-                enemies.stream().anyMatch(enemy -> enemy.getHp() > 0)){
-            if (random.nextInt(2) == 0) {
-                Character character = characters.stream().filter(c -> c.getHp() > 0).findAny().get();
-                Enemy enemy = enemies.stream().filter(e -> e.getHp() > 0).findAny().get();
-                enemy.defend(character.attack());
-                System.out.println("Противник атакован на " + character.attack());
-            } else {
-                Character character = characters.stream().filter(c -> c.getHp() > 0).findAny().get();
-                Enemy enemy = enemies.stream().filter(e -> e.getHp() > 0).findAny().get();
-                character.defend(enemy.attack());
-                System.out.println("Персонаж атакован на " + enemy.attack());
+
+        // Бой
+        Predicate<Attacker> isAlive = ch -> ch.getHp() > 0;
+        while(characters.stream().anyMatch(isAlive) && enemies.stream().anyMatch(isAlive)){
+            // Рандомный персонаж isAlive
+            Object[] charactersAlive = characters.stream().filter(isAlive).toArray();
+            Character character = (Character) charactersAlive[random.nextInt(charactersAlive.length)];
+
+            // Рандомный противник isAlive
+            Object[] enemiesAlive = enemies.stream().filter(isAlive).toArray();
+            Enemy enemy = (Enemy) enemiesAlive[random.nextInt(enemiesAlive.length)];
+
+            switch (random.nextInt(2)) {
+                case 0:
+                    enemy.defend((character.attack()));
+                    System.out.println("Противник атакован на " + character.attack() + " HP");
+                    break;
+                default:
+                    character.defend(enemy.attack());
+                    System.out.println("Персонаж атакован на " + enemy.attack() + " HP");
+                    break;
             }
         }
+
+        // После боя
         long survivedCharacters = characters.stream().filter(c -> c.getHp() > 0).count();
         long survivedEnemies = enemies.stream().filter(e -> e.getHp() > 0).count();
         System.out.println("_____________");

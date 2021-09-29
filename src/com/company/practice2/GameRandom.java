@@ -17,7 +17,7 @@ public class GameRandom {
     }
 
     public static int createAttackPower(){
-        return random.nextInt(25);
+        return random.nextInt(50);
     }
 
     public static int createProtectionLevel(){
