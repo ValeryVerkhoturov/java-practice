@@ -8,7 +8,7 @@ public class Enemy {
     private int attackPower;
     private int protectionLevel;
 
-    public Enemy(){
+    public Enemy() {
         // Доступные названия противников
         String[] possibleNames = {
                 "Краск", "Мев", "Шаута", "Зед",
