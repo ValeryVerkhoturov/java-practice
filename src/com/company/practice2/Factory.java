@@ -32,14 +32,6 @@ public class Factory {
         return new Enemy("Unnamed enemy", 100, 0, 0, createDefaultWeapon());
     }
     public static Enemy createRandomEnemy(){
-        String[] possibleNames = {
-                "Краск", "Мев", "Шаута", "Зед",
-                "Пура", "Скамос", "Моргран", "Рунефисс"};
-        Random random = new Random();
-        String name = possibleNames[random.nextInt(possibleNames.length)];
-        int hp = random.nextInt(50) + 50;
-        int attackPower = random.nextInt(25);
-        int protectionLevel = random.nextInt(25);
         return new Enemy(
                 GameRandom.createEnemyName(),
                 GameRandom.createHp(),
