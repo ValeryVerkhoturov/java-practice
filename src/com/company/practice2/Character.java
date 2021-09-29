@@ -8,7 +8,6 @@ public class Character extends Attacker {
         super(name, hp, attackPower, protectionLevel, weapon);
         this.xp = xp;
         this.level = level;
-        this.weapon = weapon;
     }
 
     public boolean canBeEquiped(int requiredWeaponLevel){
