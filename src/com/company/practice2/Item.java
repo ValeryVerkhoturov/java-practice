@@ -6,4 +6,12 @@ abstract class Item extends Entity {
         super(name);
         this.price = price;
     }
+
+    public int getPrice() {
+        return price;
+    }
+
+    protected void setPrice(int price) {
+        this.price = price;
+    }
 }

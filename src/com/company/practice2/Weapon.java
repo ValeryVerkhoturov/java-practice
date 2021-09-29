@@ -13,19 +13,11 @@ public class Weapon extends Item{
         this.requiredLevel = requiredLevel;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getAttackPower() {
         return attackPower;
     }
 
-    public int getPrice() {
-        return price;
-    }
-
-    public int getRequiredLevel() {
-        return requiredLevel;
+    protected void setAttackPower(int attackPower) {
+        this.attackPower = attackPower;
     }
 }
