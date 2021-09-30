@@ -3,104 +3,227 @@
   <ID>JAVA</ID>
   <OriginalElement>com.company.practice2.Main</OriginalElement>
   <nodes>
-    <node x="46.25" y="106.0">com.company.practice2.Creature</node>
-    <node x="0.0" y="689.0">com.company.practice2.GameRandom</node>
-    <node x="158.0" y="588.0">com.company.practice2.spells.FireElement</node>
-    <node x="468.0" y="588.0">com.company.practice2.spells.AirElement</node>
-    <node x="546.0" y="689.0">com.company.practice2.Factory</node>
-    <node x="613.0" y="588.0">com.company.practice2.spells.EtherElement</node>
-    <node x="308.0" y="588.0">com.company.practice2.spells.EarthElement</node>
-    <node x="142.5" y="0.0">com.company.practice2.Entity</node>
-    <node x="374.0" y="689.0">com.company.practice2.GameLogic</node>
-    <node x="821.0" y="689.0">com.company.practice2.spells.Spell</node>
-    <node x="135.0" y="407.5">com.company.practice2.Enemy</node>
-    <node x="0.0" y="384.0">com.company.practice2.Character</node>
-    <node x="209.25" y="256.0">com.company.practice2.Weapon</node>
-    <node x="773.0" y="588.0">com.company.practice2.spells.WaterElement</node>
-    <node x="51.25" y="267.0">com.company.practice2.Attacker</node>
-    <node x="231.75" y="128.0">com.company.practice2.Item</node>
-    <node x="192.0" y="689.0">com.company.practice2.spells.SpellStorage</node>
-    <node x="691.0" y="689.0">com.company.practice2.Main</node>
-    <node x="0.0" y="588.0">com.company.practice2.spells.FrostElement</node>
-    <node x="401.25" y="507.0">com.company.practice2.spells.Element</node>
+    <node x="436.7361111111112" y="164.0">com.company.practice2.Creature</node>
+    <node x="543.5" y="671.0">com.company.practice2.spells.FireElement</node>
+    <node x="49.175347222222285" y="328.0">com.company.practice2.GameRandom</node>
+    <node x="693.5" y="671.0">com.company.practice2.spells.AirElement</node>
+    <node x="147.00000000000003" y="421.0">com.company.practice2.Factory</node>
+    <node x="223.5" y="671.0">com.company.practice2.spells.EarthElement</node>
+    <node x="383.5" y="671.0">com.company.practice2.spells.EtherElement</node>
+    <node x="338.625" y="0.0">com.company.practice2.Entity</node>
+    <node x="90.5" y="671.0">com.company.practice2.spells.Spell</node>
+    <node x="0.0" y="421.0">com.company.practice2.GameLogic</node>
+    <node x="347.6753472222223" y="328.0">com.company.practice2.Character</node>
+    <node x="231.67534722222229" y="328.0">com.company.practice2.Enemy</node>
+    <node x="996.5" y="671.0">com.company.practice2.spells.WaterElement</node>
+    <node x="265.125" y="164.0">com.company.practice2.Weapon</node>
+    <node x="389.9253472222223" y="245.0">com.company.practice2.Attacker</node>
+    <node x="278.125" y="81.0">com.company.practice2.Item</node>
+    <node x="0.0" y="752.0">com.company.practice2.spells.SpellStorage</node>
+    <node x="288.88975694444457" y="514.0">com.company.practice2.Main</node>
+    <node x="411.625" y="590.0">com.company.practice2.spells.Element</node>
+    <node x="838.5" y="671.0">com.company.practice2.spells.FrostElement</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.company.practice2.Weapon" target="com.company.practice2.Item" relationship="GENERALIZATION">
-      <point x="0.0" y="-39.0" />
-      <point x="0.0" y="28.0" />
-    </edge>
-    <edge source="com.company.practice2.spells.FireElement" target="com.company.practice2.spells.Element" relationship="REALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="223.0" y="563.0" />
-      <point x="454.25" y="563.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice2.spells.AirElement" target="com.company.practice2.spells.Element" relationship="REALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="530.5" y="563.0" />
-      <point x="454.25" y="563.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.company.practice2.spells.EtherElement" target="com.company.practice2.spells.Element" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="453.5" y="651.0" />
+      <point x="682.25" y="651.0" />
+      <point x="682.25" y="641.0" />
+      <point x="491.125" y="641.0" />
+      <point x="26.5" y="15.5" />
     </edge>
     <edge source="com.company.practice2.Attacker" target="com.company.practice2.Creature" relationship="GENERALIZATION">
-      <point x="1.4210854715202004E-14" y="-28.0" />
-      <point x="0.0" y="50.0" />
+      <point x="35.666666666666686" y="-15.5" />
+      <point x="479.09201388888897" y="225.0" />
+      <point x="463.7361111111112" y="225.0" />
+      <point x="-27.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice2.Creature" target="com.company.practice2.Entity" relationship="GENERALIZATION">
-      <point x="1.4210854715202004E-14" y="-50.0" />
-      <point x="120.25000000000001" y="81.0" />
-      <point x="199.0" y="81.0" />
-      <point x="0.0" y="28.0" />
-    </edge>
-    <edge source="com.company.practice2.spells.EtherElement" target="com.company.practice2.spells.Element" relationship="REALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="683.0" y="563.0" />
-      <point x="454.25" y="563.0" />
+    <edge source="com.company.practice2.Main" target="com.company.practice2.GameLogic" relationship="DEPENDENCY">
+      <point x="-35.416666666666686" y="-15.5" />
+      <point x="295.9730902777779" y="493.0" />
+      <point x="63.5" y="493.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice2.spells.WaterElement" target="com.company.practice2.spells.Element" relationship="REALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="846.0" y="563.0" />
-      <point x="454.25" y="563.0" />
-      <point x="0.0" y="15.5" />
+    <edge source="com.company.practice2.Attacker" target="com.company.practice2.Weapon" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="443.4253472222223" y="215.0" />
+      <point x="346.125" y="215.0" />
+      <point x="27.0" y="15.5" />
     </edge>
     <edge source="com.company.practice2.Item" target="com.company.practice2.Entity" relationship="GENERALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="277.75" y="81.0" />
-      <point x="199.0" y="81.0" />
-      <point x="0.0" y="28.0" />
-    </edge>
-    <edge source="com.company.practice2.Enemy" target="com.company.practice2.Attacker" relationship="GENERALIZATION">
       <point x="0.0" y="-15.5" />
-      <point x="183.0" y="359.0" />
-      <point x="120.25" y="359.0" />
-      <point x="0.0" y="28.0" />
-    </edge>
-    <edge source="com.company.practice2.spells.EarthElement" target="com.company.practice2.spells.Element" relationship="REALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="378.0" y="563.0" />
-      <point x="454.25" y="563.0" />
+      <point x="319.125" y="56.0" />
+      <point x="383.125" y="56.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice2.spells.FrostElement" target="com.company.practice2.spells.Element" relationship="REALIZATION">
-      <point x="0.0" y="-28.0" />
-      <point x="69.0" y="563.0" />
-      <point x="454.25" y="563.0" />
+    <edge source="com.company.practice2.spells.AirElement" target="com.company.practice2.spells.Element" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="756.0" y="651.0" />
+      <point x="682.25" y="651.0" />
+      <point x="682.25" y="641.0" />
+      <point x="491.125" y="641.0" />
+      <point x="26.5" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Weapon" target="com.company.practice2.Item" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
       <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Creature" target="com.company.practice2.Entity" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="490.7361111111112" y="56.0" />
+      <point x="383.125" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Character" target="com.company.practice2.Weapon" relationship="DEPENDENCY">
+      <point x="-28.74999999999997" y="-15.5" />
+      <point x="376.42534722222234" y="297.0" />
+      <point x="374.4253472222223" y="297.0" />
+      <point x="374.4253472222223" y="225.0" />
+      <point x="308.0894097222223" y="225.0" />
+      <point x="308.0894097222223" y="215.0" />
+      <point x="292.125" y="215.0" />
+      <point x="-27.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.spells.SpellStorage" target="com.company.practice2.spells.Spell" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Factory" target="com.company.practice2.Enemy" relationship="CREATE">
+      <point x="12.5" y="-15.5" />
+      <point x="209.50000000000003" y="390.0" />
+      <point x="279.6753472222223" y="390.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Main" target="com.company.practice2.Character" relationship="DEPENDENCY">
+      <point x="7.083333333333314" y="-15.5" />
+      <point x="338.4730902777779" y="473.0" />
+      <point x="405.1753472222223" y="473.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.spells.WaterElement" target="com.company.practice2.spells.Element" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="1069.5" y="651.0" />
+      <point x="682.25" y="651.0" />
+      <point x="682.25" y="641.0" />
+      <point x="491.125" y="641.0" />
+      <point x="26.5" y="15.5" />
     </edge>
     <edge source="com.company.practice2.Character" target="com.company.practice2.Attacker" relationship="GENERALIZATION">
-      <point x="0.0" y="-39.0" />
-      <point x="57.5" y="359.0" />
-      <point x="120.25" y="359.0" />
-      <point x="0.0" y="28.0" />
+      <point x="28.75000000000003" y="-15.5" />
+      <point x="433.92534722222234" y="307.0" />
+      <point x="423.8003472222223" y="307.0" />
+      <point x="423.8003472222223" y="297.0" />
+      <point x="416.6753472222223" y="297.0" />
+      <point x="-26.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.spells.EarthElement" target="com.company.practice2.spells.Element" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="293.5" y="651.0" />
+      <point x="682.25" y="651.0" />
+      <point x="682.25" y="641.0" />
+      <point x="491.125" y="641.0" />
+      <point x="26.5" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Main" target="com.company.practice2.Enemy" relationship="DEPENDENCY">
+      <point x="-7.083333333333314" y="-15.5" />
+      <point x="324.30642361111126" y="473.0" />
+      <point x="279.6753472222223" y="473.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.spells.Spell" target="com.company.practice2.spells.Element" relationship="DEPENDENCY">
+      <point x="0.0" y="-15.5" />
+      <point x="147.0" y="641.0" />
+      <point x="438.125" y="641.0" />
+      <point x="-26.5" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Main" target="com.company.practice2.Factory" relationship="DEPENDENCY">
+      <point x="-21.25" y="-15.5" />
+      <point x="310.13975694444457" y="483.0" />
+      <point x="197.00000000000003" y="483.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.spells.FrostElement" target="com.company.practice2.spells.Element" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="907.5" y="651.0" />
+      <point x="682.25" y="651.0" />
+      <point x="682.25" y="641.0" />
+      <point x="491.125" y="641.0" />
+      <point x="26.5" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Factory" target="com.company.practice2.GameRandom" relationship="DEPENDENCY">
+      <point x="-37.5" y="-15.5" />
+      <point x="159.50000000000003" y="400.0" />
+      <point x="122.67534722222229" y="400.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Main" target="com.company.practice2.Creature" relationship="DEPENDENCY">
+      <point x="35.416666666666686" y="-15.5" />
+      <point x="366.80642361111126" y="493.0" />
+      <point x="517.7361111111112" y="493.0" />
+      <point x="27.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Enemy" target="com.company.practice2.Weapon" relationship="DEPENDENCY">
+      <point x="-24.0" y="-15.5" />
+      <point x="255.67534722222229" y="225.0" />
+      <point x="308.0894097222223" y="225.0" />
+      <point x="308.0894097222223" y="215.0" />
+      <point x="292.125" y="215.0" />
+      <point x="-27.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Attacker" target="com.company.practice2.Weapon" relationship="DEPENDENCY">
+      <point x="-35.66666666666663" y="-15.5" />
+      <point x="407.75868055555566" y="225.0" />
+      <point x="308.0894097222223" y="225.0" />
+      <point x="308.0894097222223" y="215.0" />
+      <point x="292.125" y="215.0" />
+      <point x="-27.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Enemy" target="com.company.practice2.Attacker" relationship="GENERALIZATION">
+      <point x="24.0" y="-15.5" />
+      <point x="303.6753472222223" y="307.0" />
+      <point x="423.8003472222223" y="307.0" />
+      <point x="423.8003472222223" y="297.0" />
+      <point x="416.6753472222223" y="297.0" />
+      <point x="-26.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Main" target="com.company.practice2.Attacker" relationship="DEPENDENCY">
+      <point x="21.25" y="-15.5" />
+      <point x="352.63975694444457" y="483.0" />
+      <point x="473.1753472222223" y="483.0" />
+      <point x="473.1753472222223" y="307.0" />
+      <point x="470.1753472222223" y="307.0" />
+      <point x="26.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Factory" target="com.company.practice2.Weapon" relationship="CREATE">
+      <point x="-12.5" y="-15.5" />
+      <point x="184.50000000000003" y="380.0" />
+      <point x="206.67534722222229" y="380.0" />
+      <point x="206.67534722222229" y="225.0" />
+      <point x="308.0894097222223" y="225.0" />
+      <point x="308.0894097222223" y="215.0" />
+      <point x="292.125" y="215.0" />
+      <point x="-27.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.Factory" target="com.company.practice2.Character" relationship="CREATE">
+      <point x="37.5" y="-15.5" />
+      <point x="234.50000000000003" y="400.0" />
+      <point x="405.1753472222223" y="400.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice2.spells.FireElement" target="com.company.practice2.spells.Element" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="608.5" y="651.0" />
+      <point x="682.25" y="651.0" />
+      <point x="682.25" y="641.0" />
+      <point x="491.125" y="641.0" />
+      <point x="26.5" y="15.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.55" showDependencies="false" x="577.2269737934703" y="354.5454545454545" />
+  <settings layout="Hierarchic" zoom="0.5499999999999998" showDependencies="true" x="361.5290885585001" y="477.09090909090924" />
   <SelectedNodes />
-  <Categories>
-    <Category>Fields</Category>
-    <Category>Properties</Category>
-  </Categories>
+  <Categories />
   <SCOPE>All</SCOPE>
   <VISIBILITY>private</VISIBILITY>
 </Diagram>
