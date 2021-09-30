@@ -3,7 +3,6 @@ package com.company.practice2;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.function.Predicate;
-import java.util.stream.Stream;
 
 public class Main {
 
