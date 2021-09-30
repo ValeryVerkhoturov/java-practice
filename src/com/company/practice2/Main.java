@@ -38,17 +38,16 @@ public class Main {
             // Рандомный противник isAlive
             Object[] enemiesAlive = enemies.stream().filter(isAlive).toArray();
             Enemy enemy = (Enemy) enemiesAlive[random.nextInt(enemiesAlive.length)];
-
-            switch (random.nextInt(2)) {
-                case 0:
-                    enemy.defend((character.attack()));
-                    System.out.println("Противник атакован на " + character.attack() + " HP");
-                    break;
-                default:
-                    character.defend(enemy.attack());
-                    System.out.println("Персонаж атакован на " + enemy.attack() + " HP");
-                    break;
+            int attack;
+            if (random.nextBoolean()) {
+                attack = character.attack();
+                enemy.defend(attack);
+                System.out.println("Противник атакован на " + attack + " HP");
+                continue;
             }
+            attack = character.attack();
+            character.defend(attack);
+            System.out.println("Персонаж атакован на " + attack + " HP");
         }
 
         // После боя

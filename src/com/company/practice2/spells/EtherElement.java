@@ -1,8 +1,8 @@
 package com.company.practice2.spells;
 
-public class EtherElement extends Element {
+public class EtherElement extends DamagingElement {
 
     public EtherElement() {
-        super("Стихия эфира");
+        super("Стихия эфира", 20);
     }
 }

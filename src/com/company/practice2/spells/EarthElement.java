@@ -1,8 +1,8 @@
 package com.company.practice2.spells;
 
-public class EarthElement extends Element {
+public class EarthElement extends DamagingElement {
 
     public EarthElement() {
-        super("Стихия земли");
+        super("Стихия земли", 20);
     }
 }

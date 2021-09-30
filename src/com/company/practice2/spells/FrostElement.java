@@ -1,8 +1,8 @@
 package com.company.practice2.spells;
 
-public class FrostElement extends Element {
+public class FrostElement extends DamagingElement {
 
     public FrostElement() {
-        super("Стихия мороза");
+        super("Стихия мороза", 25);
     }
 }

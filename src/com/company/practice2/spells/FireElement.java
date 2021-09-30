@@ -1,8 +1,8 @@
 package com.company.practice2.spells;
 
-public class FireElement extends Element {
+public class FireElement extends DamagingElement {
 
     public FireElement() {
-        super("Стихия огня");
+        super("Стихия огня", 25);
     }
 }

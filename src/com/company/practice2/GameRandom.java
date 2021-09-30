@@ -53,4 +53,5 @@ public class GameRandom {
     public static int createRequiredLevel() {
         return createLevel();
     }
+
 }

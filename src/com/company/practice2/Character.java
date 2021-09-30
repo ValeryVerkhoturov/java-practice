@@ -1,11 +1,13 @@
 package com.company.practice2;
 
+import com.company.practice2.spells.SpellStorage;
+
 public class Character extends Attacker {
     private int xp;
     private int level;
 
-    public Character(String name, int hp, int attackPower, int protectionLevel, int xp, int level, Weapon weapon){
-        super(name, hp, attackPower, protectionLevel, weapon);
+    public Character(String name, int hp, int attackPower, int protectionLevel, int xp, int level, Weapon weapon, SpellStorage<?, ?, ?> spellStorage){
+        super(name, hp, attackPower, protectionLevel, weapon, spellStorage);
         this.xp = xp;
         this.level = level;
     }
