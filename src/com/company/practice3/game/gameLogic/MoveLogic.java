@@ -12,4 +12,7 @@ public class MoveLogic {
                     return new Coordinates(j, i);
         throw new Exception("Character cannot find itself");
     }
+    public static Coordinates findNearestMob(Coordinates startCoords, Field field){
+
+    }
 }

@@ -4,10 +4,11 @@ import javax.swing.*;
 
 public class Window {
     private JPanel Expedition;
-    private JTextArea ExpeditionField;
-    private JButton button1;
-    private JButton button2;
-    private JTable table1;
+    private JTable CharacterStats;
+    private JLabel Field;
+    private JTextPane Logs;
+    private JButton Base;
+    private JButton Start;
 
     public Window(JPanel expedition) {
         Expedition = expedition;
