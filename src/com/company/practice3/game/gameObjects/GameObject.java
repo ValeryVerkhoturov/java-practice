@@ -15,7 +15,7 @@ public abstract class GameObject {
         this.name = name;
     }
 
-    public Character viewOnMap(){
+    public char viewOnMap(){
         return 'U'; // Undefined
     }
 }

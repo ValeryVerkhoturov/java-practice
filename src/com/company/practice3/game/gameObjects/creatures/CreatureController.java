@@ -2,11 +2,17 @@ package com.company.practice3.game.gameObjects.creatures;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreatureController implements Runnable{
+public abstract class CreatureController implements Runnable{
     private Creature creature;
 
     public CreatureController(Creature creature){
         this.creature = creature;
+    }
+    public CreatureController(Mob mob){
+        this.creature = mob;
+    }
+    public CreatureController(Character character){
+        this.creature = character;
     }
 
     @Override

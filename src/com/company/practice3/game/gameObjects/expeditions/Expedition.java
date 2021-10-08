@@ -23,7 +23,7 @@ public class Expedition implements Runnable{
 
     @Override
     public void run() {
-
+        Thread characterThread;
     }
 
     @Override

@@ -37,10 +37,10 @@ class RandomParameters {
         return random.nextInt(10);
     }
     public static int rows(){
-        return random.nextInt(10) + 10;
+        return random.nextInt(5) + 6;
     }
     public static int cols(){
-        return random.nextInt(10) + 10;
+        return random.nextInt(5) + 6;
     }
     public static int mobsAmmount(){
         return random.nextInt(5) + 5;

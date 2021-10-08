@@ -9,7 +9,7 @@ public class Mob extends Creature {
     }
 
     @Override
-    public java.lang.Character viewOnMap() {
+    public char viewOnMap() {
         return 'M'; // Mob
     }
 }

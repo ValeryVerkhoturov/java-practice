@@ -42,7 +42,7 @@ public class Equipment extends GameObject {
     }
 
     @Override
-    public Character viewOnMap() {
+    public char viewOnMap() {
         return 'E';
     }
 }
