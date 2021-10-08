@@ -14,4 +14,8 @@ public abstract class GameObject {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Character viewOnMap(){
+        return 'U'; // Undefined
+    }
 }

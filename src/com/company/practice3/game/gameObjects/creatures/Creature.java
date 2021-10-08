@@ -64,4 +64,5 @@ public abstract class Creature extends GameObject {
     public void setAps(double aps) {
         this.aps = aps;
     }
+
 }

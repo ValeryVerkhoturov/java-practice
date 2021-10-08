@@ -43,6 +43,6 @@ class RandomParameters {
         return random.nextInt(10) + 10;
     }
     public static int mobsAmmount(){
-        return random.nextInt(3) + 1;
+        return random.nextInt(5) + 5;
     }
 }

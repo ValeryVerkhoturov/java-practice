@@ -6,4 +6,5 @@ public abstract class Spell extends GameObject {
     public Spell(String name) {
         super(name);
     }
+
 }
