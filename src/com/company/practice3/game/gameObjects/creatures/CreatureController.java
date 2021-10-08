@@ -5,9 +5,6 @@ import java.util.concurrent.TimeUnit;
 public abstract class CreatureController implements Runnable{
     private Creature creature;
 
-    public CreatureController(Creature creature){
-        this.creature = creature;
-    }
     public CreatureController(Mob mob){
         this.creature = mob;
     }
@@ -24,5 +21,6 @@ public abstract class CreatureController implements Runnable{
                 e.printStackTrace();
             }
         }
+
     }
 }

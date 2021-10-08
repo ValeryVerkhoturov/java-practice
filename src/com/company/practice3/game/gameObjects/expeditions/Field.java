@@ -53,4 +53,11 @@ public class Field extends GameObject {
         return stringBuilder.toString().replace("M", "\u001B[31mM\u001B[0m").replace("C", "\u001B[32mC\u001B[0m");
     }
 
+    public Creature[][] getField() {
+        return field;
+    }
+
+    private void setField(Creature[][] field) {
+        this.field = field;
+    }
 }

@@ -13,7 +13,8 @@ public class Main {
     public static void main(String[] args) {
         Character character = Factory.newDefaultCharacter();
         Expedition expedition = Factory.newRandomExpedition(character);
-        System.out.print(expedition);
+        expedition.run();
+        System.out.println(expedition.toString());
 
     }
 }

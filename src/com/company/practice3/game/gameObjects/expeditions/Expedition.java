@@ -1,5 +1,6 @@
 package com.company.practice3.game.gameObjects.expeditions;
 
+import com.company.practice3.game.gameObjects.creatures.CharacterController;
 import com.company.practice3.game.gameObjects.creatures.Creature;
 import com.company.practice3.game.gameObjects.creatures.Mob;
 import com.company.practice3.game.gameObjects.creatures.Character;
@@ -23,7 +24,14 @@ public class Expedition implements Runnable{
 
     @Override
     public void run() {
-        Thread characterThread;
+        try {
+            CharacterController characterController = new CharacterController(character, field);
+            Thread characterThread = new Thread(characterController);
+            characterThread.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     @Override
