@@ -1,6 +1,6 @@
 package com.company.practice3.game.gameObjects;
 
-import com.company.practice3.game.gameObjects.creatures.character.Character;
+import com.company.practice3.game.gameObjects.creatures.Character;
 import com.company.practice3.game.gameObjects.equipment.Equipment;
 import com.company.practice3.game.gameObjects.equipment.armor.Armor;
 import com.company.practice3.game.gameObjects.equipment.weapons.Weapon;
@@ -11,8 +11,8 @@ public class Factory {
     public static Character newDefaultCharacter(){
         return new Character("@", 100, newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
-    public static Equipment<Weapon, Armor, ArrayList<Spell>> newRandomEquipment(){
-        return new Equipment<>("Bag", newRandomWeapon(), newRandomArmor(), null);
+    public static Equipment newRandomEquipment(){
+        return new Equipment("Bag", newRandomWeapon(), newRandomArmor(), null);
     }
     public static Weapon newRandomWeapon(){
         return new Weapon(RandomParameters.weaponName(), RandomParameters.damage());

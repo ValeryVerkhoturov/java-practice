@@ -18,6 +18,21 @@ public abstract class Creature extends GameObject {
         this.aps = aps;
     }
 
+    public void takeDamage(int atk){
+        atk -= getEquipment().getArmor().getDef();
+        if (atk <= 0)
+            return;
+        if (getHp() <= atk){
+            setHp(0);
+            return;
+        }
+        setHp(getHp() - 1);
+    }
+
+    public boolean isAlive(){
+        return getHp() > 0;
+    }
+
     public int getHp() {
         return hp;
     }

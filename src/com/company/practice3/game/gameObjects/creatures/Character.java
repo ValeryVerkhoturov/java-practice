@@ -1,6 +1,5 @@
-package com.company.practice3.game.gameObjects.creatures.character;
+package com.company.practice3.game.gameObjects.creatures;
 
-import com.company.practice3.game.gameObjects.creatures.Creature;
 import com.company.practice3.game.gameObjects.equipment.Equipment;
 
 public class Character extends Creature {
