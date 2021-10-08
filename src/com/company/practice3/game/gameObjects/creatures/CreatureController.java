@@ -3,7 +3,7 @@ package com.company.practice3.game.gameObjects.creatures;
 import java.util.concurrent.TimeUnit;
 
 public abstract class CreatureController implements Runnable{
-    private Creature creature;
+    protected Creature creature;
 
     public CreatureController(Mob mob){
         this.creature = mob;
