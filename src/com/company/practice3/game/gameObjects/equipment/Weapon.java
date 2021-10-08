@@ -1,4 +1,4 @@
-package com.company.practice3.game.gameObjects.equipment.weapons;
+package com.company.practice3.game.gameObjects.equipment;
 
 import com.company.practice3.game.gameObjects.GameObject;
 

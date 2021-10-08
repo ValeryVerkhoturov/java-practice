@@ -36,5 +36,13 @@ class RandomParameters {
     public static int def(){
         return random.nextInt(10);
     }
-
+    public static int rows(){
+        return random.nextInt(10) + 10;
+    }
+    public static int cols(){
+        return random.nextInt(10) + 10;
+    }
+    public static int mobsAmmount(){
+        return random.nextInt(3) + 1;
+    }
 }

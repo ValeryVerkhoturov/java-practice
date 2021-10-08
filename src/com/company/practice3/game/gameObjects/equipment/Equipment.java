@@ -1,9 +1,7 @@
 package com.company.practice3.game.gameObjects.equipment;
 
 import com.company.practice3.game.gameObjects.GameObject;
-import com.company.practice3.game.gameObjects.equipment.armor.Armor;
 import com.company.practice3.game.gameObjects.equipment.spells.Spell;
-import com.company.practice3.game.gameObjects.equipment.weapons.Weapon;
 
 import java.util.ArrayList;
 
