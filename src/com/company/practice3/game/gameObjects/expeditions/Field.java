@@ -10,11 +10,11 @@ import java.util.Random;
 
 public class Field extends GameObject {
     private Creature[][] field;
-    private int rows;
-    private int cols;
 
-    public Field(String name, int rows, int cols) {
+    public Field(String name, int rows, int cols) throws Exception {
         super(name);
+        if (rows <= 0 || cols <= 0)
+            throw new Exception("Impossible field");
         field = new Creature[rows][cols];
     }
 
@@ -59,5 +59,24 @@ public class Field extends GameObject {
 
     private void setField(Creature[][] field) {
         this.field = field;
+    }
+
+    public void setCell(Coordinates coordinates, Creature creature) throws Exception {
+        if (field[coordinates.getY()][coordinates.getX()] != null)
+            throw new Exception("Cell with " + coordinates + " is not empty");
+        field[coordinates.getY()][coordinates.getX()] = creature;
+    }
+
+    public void moveCell(Coordinates oldCoords, Coordinates newCoords){
+        Creature creature = field[oldCoords.getY()][oldCoords.getX()];
+        field[oldCoords.getY()][oldCoords.getX()] = null;
+        field[newCoords.getY()][newCoords.getX()] = creature;
+    }
+    public int getRows() {
+        return getField().length;
+    }
+
+    public int getCols() {
+        return  getField()[0].length;
     }
 }

@@ -1,5 +1,7 @@
 package com.company.practice3.game.gameObjects.creatures;
 
+import com.company.practice3.game.gameLogic.GameLogic;
+
 import java.util.concurrent.TimeUnit;
 
 public abstract class CreatureController implements Runnable{
@@ -14,13 +16,6 @@ public abstract class CreatureController implements Runnable{
 
     @Override
     public void run() {
-        while(creature.getHp() > 0){
-            try {
-                TimeUnit.MILLISECONDS.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
+        GameLogic.samlingSleep();
     }
 }

@@ -9,7 +9,7 @@ import com.company.practice3.game.gameObjects.expeditions.Expedition;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Character character = Factory.newDefaultCharacter();
         Expedition expedition = Factory.newRandomExpedition(character);
         Thread thread = new Thread(expedition);

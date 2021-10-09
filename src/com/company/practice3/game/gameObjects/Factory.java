@@ -33,10 +33,10 @@ public class Factory {
     public static Armor newRandomArmor(){
         return new Armor(RandomParameters.armorName(), RandomParameters.def());
     }
-    public static Field newRandomField(){
+    public static Field newRandomField() throws Exception {
         return new Field("Random Game Field", RandomParameters.rows(), RandomParameters.cols());
     }
-    public static Expedition newRandomExpedition(Character character){
+    public static Expedition newRandomExpedition(Character character) throws Exception {
         return new Expedition(newRandomField(), character, newRandomMobs());
     }
 }
