@@ -38,6 +38,6 @@ public class ExpeditionLogic {
     }
 
 //    public static Coordinates goToMob(Coordinates characterCoords, Coordinates mobCoords, Field field){
-//
+//        while
 //    }
 }
