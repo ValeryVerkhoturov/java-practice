@@ -5,29 +5,38 @@ import com.company.practice3.game.gameObjects.creatures.Mob;
 import com.company.practice3.game.gameObjects.equipment.Equipment;
 import com.company.practice3.game.gameObjects.equipment.Armor;
 import com.company.practice3.game.gameObjects.equipment.Weapon;
+import com.company.practice3.game.gameObjects.equipment.spells.HealSpell;
+import com.company.practice3.game.gameObjects.equipment.spells.Spell;
 import com.company.practice3.game.gameObjects.expeditions.ExpeditionController;
 import com.company.practice3.game.gameObjects.expeditions.Field;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Factory {
     public static Character newDefaultCharacter(){
-        return new Character("@", 100, newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
+        return new Character(RandomParameters.creatureName(), 100, newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
     public static Mob newRandomMob(){
         return new Mob(RandomParameters.creatureName(), RandomParameters.hp(), newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
     public static ArrayList<Mob> newRandomMobs(){
-        ArrayList<Mob> mobs = new ArrayList<Mob>();
+        ArrayList<Mob> mobs = new ArrayList<>();
         for (int i = 0; i < RandomParameters.mobsAmmount(); i++){
             mobs.add(newRandomMob());
         }
         return mobs;
     }
     public static Equipment newRandomEquipment(){
-        return new Equipment("Bag", newRandomWeapon(), newRandomArmor(), null);
+        return new Equipment("Bag", newRandomWeapon(), newRandomArmor(), newArrayListOfSpells());
+    }
+    public static ArrayList<Spell> newArrayListOfSpells(){
+        ArrayList<Spell> spells  = new ArrayList<>();
+        for (int i = 0; i < ThreadLocalRandom.current().nextInt(3); i++)
+            spells.add(new HealSpell(ThreadLocalRandom.current().nextInt(25)));
+        return spells;
     }
     public static Weapon newRandomWeapon(){
         return new Weapon(RandomParameters.weaponName(), RandomParameters.damage());

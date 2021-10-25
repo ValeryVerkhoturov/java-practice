@@ -7,9 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.TimeUnit;
-
 public class GameController {
     private Character character;
     @FXML
@@ -30,6 +27,7 @@ public class GameController {
                 "     )   /\\ \\._./ /\\   (\n" +
                 "jgs   )_/ /|\\   /|\\ \\_(");
         character = Factory.newDefaultCharacter();
+        equipment.setText(character.printStats());
     }
     @FXML
     private void runExpedition() throws Exception {
