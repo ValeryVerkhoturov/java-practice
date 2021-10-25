@@ -5,8 +5,10 @@ import com.company.practice3.game.gameObjects.creatures.Mob;
 import com.company.practice3.game.gameObjects.equipment.Equipment;
 import com.company.practice3.game.gameObjects.equipment.Armor;
 import com.company.practice3.game.gameObjects.equipment.Weapon;
-import com.company.practice3.game.gameObjects.expeditions.Expedition;
+import com.company.practice3.game.gameObjects.expeditions.ExpeditionController;
 import com.company.practice3.game.gameObjects.expeditions.Field;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 import java.util.ArrayList;
 
@@ -36,7 +38,7 @@ public class Factory {
     public static Field newRandomField() throws Exception {
         return new Field("Random Game Field", RandomParameters.rows(), RandomParameters.cols());
     }
-    public static Expedition newRandomExpedition(Character character) throws Exception {
-        return new Expedition(newRandomField(), character, newRandomMobs());
+    public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton) throws Exception {
+        return new ExpeditionController(newRandomField(), character, newRandomMobs(), field, equipment, expeditionButton, autoExpeditionButton);
     }
 }

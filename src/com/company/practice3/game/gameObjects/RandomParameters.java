@@ -31,7 +31,7 @@ class RandomParameters {
         return random.nextInt(10) + 1;
     }
     public static double aps(){
-        return random.nextDouble();
+        return random.nextDouble() + 0.5;
     }
     public static int def(){
         return random.nextInt(10);
