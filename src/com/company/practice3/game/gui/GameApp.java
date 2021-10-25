@@ -25,7 +25,9 @@ public class GameApp extends Application{
     }
     @Override
     public void stop() throws Exception {
-
+//        for(Thread thread: Thread.getAllStackTraces().keySet())
+//            if (thread.isAlive())
+//                thread.interrupt();
         System.out.println("Application stops");
         super.stop();
     }

@@ -28,7 +28,7 @@ class RandomParameters {
         return random.nextInt(100) + 1;
     }
     public static int atk(){
-        return random.nextInt(10) + 1;
+        return random.nextInt(25) + 1;
     }
     public static double aps(){
         return random.nextDouble() + 0.5;

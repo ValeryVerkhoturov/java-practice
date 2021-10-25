@@ -24,7 +24,7 @@ public class Character extends Creature {
             }
         }
         out.append("Атака ").append(getAtk()).append("\n")
-                .append("Замах ").append(Math.round(getAps())).append("\n");
+                .append("Замах ").append(String.format("%,.2f", getAps())).append("\n");
         return out.toString();
     }
     @Override

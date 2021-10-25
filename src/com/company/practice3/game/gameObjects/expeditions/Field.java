@@ -17,7 +17,12 @@ public class Field extends GameObject {
             throw new Exception("Impossible field");
         field = new Creature[rows][cols];
     }
-
+    public Creature getCreature(Coordinates creatureCoords){
+        return field[creatureCoords.getY()][creatureCoords.getX()];
+    }
+    public void removeCreature(Coordinates creatureCoords){
+        field[creatureCoords.getY()][creatureCoords.getX()] = null;
+    }
     public void insertRandomly(ArrayList<Mob> mobs){
         for (Creature creature : mobs)
             insertRandomly(creature);
@@ -69,9 +74,8 @@ public class Field extends GameObject {
     }
 
     public void moveCell(Coordinates oldCoords, Coordinates newCoords){
-        Creature creature = field[oldCoords.getY()][oldCoords.getX()];
+        field[newCoords.getY()][newCoords.getX()] = field[oldCoords.getY()][oldCoords.getX()];
         field[oldCoords.getY()][oldCoords.getX()] = null;
-        field[newCoords.getY()][newCoords.getX()] = creature;
     }
     public int getRows() {
         return getField().length;
