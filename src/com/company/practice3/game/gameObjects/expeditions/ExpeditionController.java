@@ -9,6 +9,7 @@ import javafx.concurrent.Task;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -39,7 +40,22 @@ public class ExpeditionController implements Runnable{
         Platform.runLater(() -> expeditionBtn.setDisable(true));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(true));
         Platform.runLater(() -> fieldLbl.setText(field.toString()));
-        if (character != null) Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+        Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+        try {
+            Thread characterThread = new Thread(new CharacterController(character, field));
+            characterThread.setName("Персонаж");
+            characterThread.start();
+            while (characterThread.isAlive()){
+                System.out.println("hello");
+                Platform.runLater(() -> fieldLbl.setText(field.toString()));
+                Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+                TimeUnit.MILLISECONDS.sleep(2);
+            }
+            Platform.runLater(() -> fieldLbl.setText(field.toString()));
+            Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         Platform.runLater(() -> expeditionBtn.setDisable(false));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(false));
 //        try {

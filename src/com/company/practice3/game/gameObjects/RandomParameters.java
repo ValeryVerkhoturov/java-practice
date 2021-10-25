@@ -10,8 +10,8 @@ class RandomParameters {
     private final static String[] weaponNames = {
             "Unholy Might", "Scalpel", "Shadowsteel", "Timeworn Defender", "Stormguard Katana",
             "Diamond Spellblade", "Scar", " Carver of Darkness"};
-    private final static String[] armorNames = {"Chestplate of Doomed Comrades", "Batteplate of Fleeting Punishment",
-            "Iron Tunic of Hallowed Powers", "Skeletal Chestplate", "Oathkeeper's Mail Cuirass", "Desolation Ebon Cuirass"};
+    private final static String[] armorNames = {"Chestplate of Doomed Comrades", "Batteplate of Punishment",
+            "Iron Tunic", "Skeletal Chestplate", "Oathkeeper's Cuirass", "Desolation Cuirass"};
     public static String creatureName(){
         return creatureNames[random.nextInt(creatureNames.length)];
     }

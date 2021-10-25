@@ -6,27 +6,21 @@ import com.company.practice3.game.gameObjects.expeditions.Coordinates;
 import com.company.practice3.game.gameObjects.expeditions.Field;
 
 
-public class CharacterController extends CreatureController {
-    // remove field, coordinates
+public class CharacterController implements Runnable{
     private Field field;
-    private Coordinates coordinates;
+    private Character character;
 
-    public CharacterController(Character character, Field field) throws Exception {
-        super(character);
+    public CharacterController(Character character, Field field) {
+        this.character = character;
         this.field = field;
-        this.coordinates = ExpeditionLogic.searchCreatureCoordinates(creature, field);
     }
 
     @Override
     public void run() {
         try {
-            field.moveCell(coordinates, new Coordinates(2, 2));
+            ExpeditionLogic.expeditionLoop(character, field);
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        System.out.println(field);
-        while(creature.getHp() > 0){
-            GameLogic.samlingSleep();
         }
     }
 }
