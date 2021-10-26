@@ -13,17 +13,14 @@ public class FightLogic {
 
     public static void fight(Character character, Field field) throws Exception {
         Coordinates mobCoords = ExpeditionLogic.findCloseMob(character, field);
-        System.out.println("Mobcoords" + mobCoords);
         Mob mob = (Mob) field.getCreature(mobCoords);
         while (character.isAlive() && mob.isAlive()){
             if(ThreadLocalRandom.current().nextBoolean()) {
                 mob.takeDamage(character.getAtk() + character.getEquipment().getWeapon().getDamage());
-                System.out.println("Моб " + mob.getHp());
                 TimeUnit.MILLISECONDS.sleep(Math.round(character.getAtk()));
             }
             else {
                 character.takeDamage(mob.getAtk() + mob.getEquipment().getWeapon().getDamage());
-                System.out.println("Перс " + character.getHp());
                 TimeUnit.MILLISECONDS.sleep(Math.round(mob.getAtk()));
             }
         }
