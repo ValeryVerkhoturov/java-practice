@@ -12,7 +12,7 @@ public class Character extends Creature {
                 "Здоровье " + getHp() + "\n" +
                 "Оружие\n" +
                 "  Имя " + getEquipment().getWeapon().getName() + "\n" +
-                "  Урон" + getEquipment().getWeapon().getDamage() + "\n" +
+                "  Урон " + getEquipment().getWeapon().getDamage() + "\n" +
                 "Броня\n" +
                 "  Имя " + getEquipment().getArmor().getName() + "\n" +
                 "  Защита " + getEquipment().getArmor().getDef() + "\n");
@@ -26,6 +26,13 @@ public class Character extends Creature {
         out.append("Атака ").append(getAtk()).append("\n")
                 .append("Замах ").append(String.format("%,.2f", getAps())).append("\n");
         return out.toString();
+    }
+    public void castHealSpell(){
+        if (getEquipment().getSpells().size() > 0){
+            Spell spell = getEquipment().getSpells().stream().findFirst().get();
+            setHp(getHp() + spell.cast());
+            getEquipment().getSpells().remove(spell);
+        }
     }
     @Override
     public char viewOnMap() {

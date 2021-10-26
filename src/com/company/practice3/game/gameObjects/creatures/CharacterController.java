@@ -1,8 +1,6 @@
 package com.company.practice3.game.gameObjects.creatures;
 
-import com.company.practice3.game.gameLogic.GameLogic;
 import com.company.practice3.game.gameLogic.ExpeditionLogic;
-import com.company.practice3.game.gameObjects.expeditions.Coordinates;
 import com.company.practice3.game.gameObjects.expeditions.Field;
 
 

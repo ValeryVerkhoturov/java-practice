@@ -13,11 +13,9 @@ public class ExpeditionLogic {
     public static void expeditionLoop(Character character, Field field) throws Exception {
         Coordinates mobCoordinates = findCloseMob(character, field);
         while (mobCoordinates != null && character.isAlive()){
-            System.out.println(searchCreatureCoordinates(character, field));
             goToMob(character, field);
-            System.out.println(searchCreatureCoordinates(character, field));
-            TimeUnit.MILLISECONDS.sleep(500);
             FightLogic.fight(character, field);
+            character.castHealSpell();
             mobCoordinates = findCloseMob(character, field);
         }
     }
@@ -46,21 +44,22 @@ public class ExpeditionLogic {
     public static void goToMob(Character  character, Field field) throws Exception {
         Coordinates characterCoords = searchCreatureCoordinates(character, field);
         Coordinates mobCoords = findCloseMob(character, field);
-        while (Math.abs(characterCoords.getX() - mobCoords.getX()) >= 1 && Math.abs(characterCoords.getY() - mobCoords.getY()) >= 1 &&
-                Math.abs(characterCoords.getX() - mobCoords.getX()) +Math.abs(characterCoords.getY() - mobCoords.getY()) > 1){
+        while (Math.abs(characterCoords.getX() - mobCoords.getX()) > 1 || Math.abs(characterCoords.getY() - mobCoords.getY()) > 1 ||
+                Math.abs(characterCoords.getX() - mobCoords.getX()) + Math.abs(characterCoords.getY() - mobCoords.getY()) > 1){
             if (ThreadLocalRandom.current().nextBoolean()) {
                 if (mobCoords.getX() > characterCoords.getX())
                     field.moveCell(characterCoords, new Coordinates(characterCoords.getX() + 1, characterCoords.getY()));
-                else
+                else if (mobCoords.getX() < characterCoords.getX())
                     field.moveCell(characterCoords, new Coordinates(characterCoords.getX() - 1, characterCoords.getY()));
             } else {
                 if (mobCoords.getY() > characterCoords.getY())
                     field.moveCell(characterCoords, new Coordinates(characterCoords.getX(), characterCoords.getY() + 1));
-                else
+                else if (mobCoords.getY() < characterCoords.getY())
                     field.moveCell(characterCoords, new Coordinates(characterCoords.getX(), characterCoords.getY() - 1));
             }
             characterCoords = searchCreatureCoordinates(character, field);
             mobCoords = findCloseMob(character, field);
+            TimeUnit.MILLISECONDS.sleep(400);
         }
     }
 }

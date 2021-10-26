@@ -35,7 +35,7 @@ public class Factory {
     public static ArrayList<Spell> newArrayListOfSpells(){
         ArrayList<Spell> spells  = new ArrayList<>();
         for (int i = 0; i < ThreadLocalRandom.current().nextInt(3); i++)
-            spells.add(new HealSpell(ThreadLocalRandom.current().nextInt(25)));
+            spells.add(new HealSpell(ThreadLocalRandom.current().nextInt(5) + 5));
         return spells;
     }
     public static Weapon newRandomWeapon(){

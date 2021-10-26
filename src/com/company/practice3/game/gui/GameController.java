@@ -2,7 +2,7 @@ package com.company.practice3.game.gui;
 
 import com.company.practice3.game.gameObjects.Factory;
 import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.expeditions.ExpeditionController;
+import com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,13 +19,7 @@ public class GameController {
     private Button autoExpedition;
     @FXML
     private void initialize(){
-        battleField.setText("            _   _\n" +
-                "           (.)_(.)\n" +
-                "        _ (   _   ) _\n" +
-                "       / \\/`-----'\\/ \\\n" +
-                "     __\\ ( (     ) ) /__\n" +
-                "     )   /\\ \\._./ /\\   (\n" +
-                "jgs   )_/ /|\\   /|\\ \\_(");
+        battleField.setText(ASCIIart.base);
         character = Factory.newDefaultCharacter();
         equipment.setText(character.printStats());
     }
@@ -39,10 +33,10 @@ public class GameController {
     }
     @FXML
     private void runAutoExpedition(){
-        expedition.setDisable(true);
-        autoExpedition.setDisable(true);
-        // TODO
-        expedition.setDisable(true);
-        autoExpedition.setDisable(true);
+        Thread thread = new Thread(
+                new AutoExpeditionController(
+                        character, battleField, equipment, expedition, autoExpedition));
+        thread.setName("Автоэкспедиция");
+        thread.start();
     }
 }

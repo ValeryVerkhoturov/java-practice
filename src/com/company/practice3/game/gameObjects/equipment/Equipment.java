@@ -40,6 +40,9 @@ public class Equipment extends GameObject {
     public void setSpells(ArrayList<Spell> spells) {
         this.spells = spells;
     }
+    public void addSpells(ArrayList<Spell> spells){
+        this.spells.addAll(spells);
+    }
 
     @Override
     public char viewOnMap() {

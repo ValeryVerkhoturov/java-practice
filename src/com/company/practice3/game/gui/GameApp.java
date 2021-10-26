@@ -22,15 +22,12 @@ public class GameApp extends Application{
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Practice 3 game");
-        stage.getIcons().add(new Image(GameApp.class.getResourceAsStream("icon.png")));
+        stage.getIcons().add(new Image(Objects.requireNonNull(GameApp.class.getResourceAsStream("icon.png"))));
         stage.show();
     }
     @Override
     public void stop() throws Exception {
-//        for(Thread thread: Thread.getAllStackTraces().keySet())
-//            if (thread.isAlive())
-//                thread.interrupt();
-        System.out.println("Application stops");
+        System.out.println("Вот и сказочке конец");
         super.stop();
     }
 }

@@ -1,12 +1,11 @@
 package com.company.practice3.game.gameLogic;
 
 import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.creatures.Creature;
 import com.company.practice3.game.gameObjects.creatures.Mob;
+import com.company.practice3.game.gameObjects.equipment.Equipment;
 import com.company.practice3.game.gameObjects.expeditions.Coordinates;
 import com.company.practice3.game.gameObjects.expeditions.Field;
 
-import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
@@ -32,6 +31,18 @@ public class FightLogic {
         }
         if (!mob.isAlive())
             field.removeCreature(ExpeditionLogic.searchCreatureCoordinates(mob, field));
-    }
+        if (character.isAlive())
+            lootMob(character, mob);
 
+    }
+    public static void lootMob(Character character, Mob mob){
+        Equipment charcterEquipment = character.getEquipment();
+        Equipment mobEquipment = mob.getEquipment();
+        if (mobEquipment.getWeapon().getDamage() > charcterEquipment.getWeapon().getDamage())
+            charcterEquipment.setWeapon(mobEquipment.getWeapon());
+        if (mobEquipment.getArmor().getDef() > charcterEquipment.getArmor().getDef())
+            charcterEquipment.setArmor(mobEquipment.getArmor());
+        if (mobEquipment.getSpells().size() > 0 && charcterEquipment.getSpells().size() < 3)
+            charcterEquipment.addSpells(mobEquipment.getSpells());
+    }
 }

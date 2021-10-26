@@ -1,11 +1,10 @@
 package com.company.practice3.game.gameObjects.expeditions;
 
 import com.company.practice3.game.gameObjects.creatures.CharacterController;
-import com.company.practice3.game.gameObjects.creatures.Creature;
 import com.company.practice3.game.gameObjects.creatures.Mob;
 import com.company.practice3.game.gameObjects.creatures.Character;
+import com.company.practice3.game.gui.ASCIIart;
 import javafx.application.Platform;
-import javafx.concurrent.Task;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -47,13 +46,14 @@ public class ExpeditionController implements Runnable{
             while (characterThread.isAlive()){
                 Platform.runLater(() -> fieldLbl.setText(field.toString()));
                 Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
-                TimeUnit.MILLISECONDS.sleep(100);
+                TimeUnit.MILLISECONDS.sleep(50);
             }
             Platform.runLater(() -> fieldLbl.setText(field.toString()));
             Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Platform.runLater(() -> fieldLbl.setText(ASCIIart.base));
         Platform.runLater(() -> expeditionBtn.setDisable(false));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(false));
     }
