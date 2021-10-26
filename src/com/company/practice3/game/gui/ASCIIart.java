@@ -10,7 +10,7 @@ public class ASCIIart {
             "      : .___, :\n" +
             "       `-----'\n" +
             "персонаж набирается сил\n" +
-            "для будущих свершений";
+            " для будущих свершений";
     public static String autoExpedition = "            \n" +
             "           \n" +
             "            \n" +

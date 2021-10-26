@@ -19,14 +19,12 @@ public class FightLogic {
             if(ThreadLocalRandom.current().nextBoolean()) {
                 mob.takeDamage(character.getAtk() + character.getEquipment().getWeapon().getDamage());
                 System.out.println("Моб " + mob.getHp());
-                TimeUnit.MILLISECONDS.sleep(100);
-//                TimeUnit.MILLISECONDS.sleep(Math.round(character.getAtk()*100));
+                TimeUnit.MILLISECONDS.sleep(Math.round(character.getAtk()));
             }
             else {
                 character.takeDamage(mob.getAtk() + mob.getEquipment().getWeapon().getDamage());
                 System.out.println("Перс " + character.getHp());
-                TimeUnit.MILLISECONDS.sleep(100);
-//                TimeUnit.MILLISECONDS.sleep(Math.round(mob.getAtk()*100));
+                TimeUnit.MILLISECONDS.sleep(Math.round(mob.getAtk()));
             }
         }
         if (!mob.isAlive())
