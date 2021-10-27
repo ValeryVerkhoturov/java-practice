@@ -1,6 +1,6 @@
 package com.company.practice3.game.gui
 
-object ASCIIart {
+object AsciiArt {
     @JvmField
     val baseAnimation = arrayOf(
 """         ((((
@@ -13,9 +13,9 @@ object ASCIIart {
        `-----'
 персонаж набирается сил
  для будущих свершений""",
-"""        ))))
-         ((((
-        ((((
+"""        ((((
+       ((((
+        ))))
       _ .---.
      ( |`---'|
       \|     |
@@ -25,17 +25,16 @@ object ASCIIart {
  для будущих свершений"""
     )
     const val autoExpedition =
-    """            
-             
+"""            
+           
             
       _ .---.
      ( |`---'|
       \|     |
       : .___, :
        `-----'
-
-  ушел в автоэкспедицию
-  """
+ ушел в автоэкспедицию 
+ """
     const val death =
 """
       ______

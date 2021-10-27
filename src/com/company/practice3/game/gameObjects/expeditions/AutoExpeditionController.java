@@ -4,7 +4,7 @@ import com.company.practice3.game.gameLogic.FightLogic;
 import com.company.practice3.game.gameObjects.Factory;
 import com.company.practice3.game.gameObjects.creatures.Character;
 import com.company.practice3.game.gameObjects.creatures.Mob;
-import com.company.practice3.game.gui.ASCIIart;
+import com.company.practice3.game.gui.AsciiArt;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -26,13 +26,16 @@ public class AutoExpeditionController implements Runnable{
 
     private final ReentrantLock lock;
 
-    public AutoExpeditionController(Character character, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn, ReentrantLock lock){
+    private final Mob mob;
+
+    public AutoExpeditionController(Character character, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn, ReentrantLock lock, Mob mob){
         this.character = character;
         this.fieldLbl = fieldLbl;
         this.equipmentLbl = equipmentLbl;
         this.expeditionBtn = expeditionBtn;
         this.autoExpeditionBtn = autoExpeditionBtn;
         this.lock = lock;
+        this.mob = mob;
     }
 
     @Override
@@ -42,12 +45,12 @@ public class AutoExpeditionController implements Runnable{
         lock.lock();
         Platform.runLater(() -> expeditionBtn.setDisable(true));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(true));
-        Platform.runLater(() -> fieldLbl.setText(ASCIIart.autoExpedition));
-        Mob mob = Factory.newRandomMob();
-        character.takeDamage(mob.getAtk());
+        Platform.runLater(() -> fieldLbl.setText(AsciiArt.autoExpedition));
+        character.takeDamage(mob.getAtk() * 4);
+        character.castHealSpell();
         FightLogic.lootMob(character, mob);
         try {
-            TimeUnit.MILLISECONDS.sleep(500);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

@@ -7,6 +7,7 @@ import com.company.practice3.game.gameObjects.equipment.Armor;
 import com.company.practice3.game.gameObjects.equipment.Weapon;
 import com.company.practice3.game.gameObjects.equipment.spells.HealSpell;
 import com.company.practice3.game.gameObjects.equipment.spells.Spell;
+import com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController;
 import com.company.practice3.game.gameObjects.expeditions.ExpeditionController;
 import com.company.practice3.game.gameObjects.expeditions.Field;
 import javafx.scene.control.Button;
@@ -58,5 +59,9 @@ public class Factory {
 
     public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton, ReentrantLock lock) throws Exception {
         return new ExpeditionController(newRandomField(), character, newRandomMobs(), field, equipment, expeditionButton, autoExpeditionButton, lock);
+    }
+
+    public static AutoExpeditionController newRandomAutoExpedtionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpedition, ReentrantLock lock){
+        return new AutoExpeditionController(character, field, equipment, expeditionButton, autoExpedition, lock, newRandomMob());
     }
 }

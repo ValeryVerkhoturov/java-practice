@@ -32,12 +32,12 @@ public class BaseAnimationController implements Runnable {
     public void run() {
         while (true){
             if (!character.isAlive() && !lock.isLocked()){
-                Platform.runLater(() -> label.setText(ASCIIart.death));
+                Platform.runLater(() -> label.setText(AsciiArt.death));
                 Platform.runLater(() -> expedition.setDisable(true));
                 Platform.runLater(() -> autoExpedition.setDisable(true));
                 return;
             }
-            for (String art: ASCIIart.baseAnimation) {
+            for (String art: AsciiArt.baseAnimation) {
                 if (!lock.isLocked())
                     Platform.runLater(() -> label.setText(art));
                 try {
