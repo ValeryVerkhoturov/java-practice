@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Factory {
@@ -35,8 +34,8 @@ public class Factory {
     }
     public static ArrayList<Spell> newArrayListOfSpells(){
         ArrayList<Spell> spells  = new ArrayList<>();
-        for (int i = 0; i < ThreadLocalRandom.current().nextInt(3); i++)
-            spells.add(new HealSpell(ThreadLocalRandom.current().nextInt(5) + 5));
+        for (int i = 0; i < RandomParameters.spellAmmount(); i++)
+            spells.add(new HealSpell(RandomParameters.healStrength()));
         return spells;
     }
     public static Weapon newRandomWeapon(){

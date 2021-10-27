@@ -22,7 +22,7 @@ class RandomParameters {
         return armorNames[random.nextInt(armorNames.length)];
     }
     public static int damage(){
-        return random.nextInt(25) + 1;
+        return random.nextInt(15) + 15;
     }
     public static int hp(){
         return random.nextInt(50) + 1;
@@ -44,5 +44,11 @@ class RandomParameters {
     }
     public static int mobsAmmount(){
         return random.nextInt(5) + 5;
+    }
+    public static int healStrength(){
+        return random.nextInt(5) + 1;
+    }
+    public static int spellAmmount(){
+        return random.nextInt(3);
     }
 }
