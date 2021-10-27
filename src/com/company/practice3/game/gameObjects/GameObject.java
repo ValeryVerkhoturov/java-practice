@@ -1,6 +1,7 @@
 package com.company.practice3.game.gameObjects;
 
 public abstract class GameObject {
+
     private String name;
 
     public GameObject(String name) {

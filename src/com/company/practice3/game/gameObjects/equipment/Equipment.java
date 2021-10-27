@@ -7,9 +7,13 @@ import java.util.ArrayList;
 
 
 public class Equipment extends GameObject {
+
     private Weapon weapon;
+
     private Armor armor;
+
     private ArrayList<Spell> spells;
+
     public Equipment(String name, Weapon weapon, Armor armor, ArrayList<Spell> spells) {
         super(name);
         this.weapon = weapon;
@@ -40,6 +44,7 @@ public class Equipment extends GameObject {
     public void setSpells(ArrayList<Spell> spells) {
         this.spells = spells;
     }
+
     public void addSpells(ArrayList<Spell> spells){
         this.spells.addAll(spells);
     }

@@ -1,6 +1,7 @@
 package com.company.practice3.game.gui;
 
 public class ASCIIart {
+
     public static String[] baseAnimation = {
             "         ((((\n" +
             "        ((((\n" +
@@ -24,7 +25,9 @@ public class ASCIIart {
             "персонаж набирается сил\n" +
             " для будущих свершений"
     };
-    public static String autoExpedition = "            \n" +
+
+    public static String autoExpedition =
+            "            \n" +
             "           \n" +
             "            \n" +
             "     _ .---.\n" +

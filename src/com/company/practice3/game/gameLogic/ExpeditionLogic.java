@@ -10,6 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 public class ExpeditionLogic {
+
     public static void expeditionLoop(Character character, Field field) throws Exception {
         Coordinates mobCoordinates = findCloseMob(character, field);
         while (mobCoordinates != null && character.isAlive()){
@@ -19,6 +20,7 @@ public class ExpeditionLogic {
             mobCoordinates = findCloseMob(character, field);
         }
     }
+
     public static Coordinates searchCreatureCoordinates(Creature creature, Field field) throws Exception {
         for (int i = 0; i < field.getField().length; i++)
             for (int j = 0; j < field.getField()[0].length; j++)

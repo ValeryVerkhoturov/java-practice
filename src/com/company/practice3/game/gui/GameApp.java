@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class GameApp extends Application{
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -25,6 +26,7 @@ public class GameApp extends Application{
         stage.getIcons().add(new Image(Objects.requireNonNull(GameApp.class.getResourceAsStream("icon.png"))));
         stage.show();
     }
+
     @Override
     public void stop() throws Exception {
         System.out.println("Вот и сказочке конец");

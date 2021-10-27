@@ -30,6 +30,7 @@ public class FightLogic {
             lootMob(character, mob);
 
     }
+
     public static void lootMob(Character character, Mob mob){
         Equipment charcterEquipment = character.getEquipment();
         Equipment mobEquipment = mob.getEquipment();

@@ -13,12 +13,18 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class AutoExpeditionController implements Runnable{
-    private Character character;
-    private Label fieldLbl;
-    private Label equipmentLbl;
-    private Button expeditionBtn;
-    private Button autoExpeditionBtn;
-    private ReentrantLock lock;
+
+    private final Character character;
+
+    private final Label fieldLbl;
+
+    private final Label equipmentLbl;
+
+    private final Button expeditionBtn;
+
+    private final Button autoExpeditionBtn;
+
+    private final ReentrantLock lock;
 
     public AutoExpeditionController(Character character, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn, ReentrantLock lock){
         this.character = character;

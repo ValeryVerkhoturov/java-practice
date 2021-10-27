@@ -16,12 +16,15 @@ import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Factory {
+
     public static Character newDefaultCharacter(){
         return new Character(RandomParameters.creatureName(), 100, newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
+
     public static Mob newRandomMob(){
         return new Mob(RandomParameters.creatureName(), RandomParameters.hp(), newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
+
     public static ArrayList<Mob> newRandomMobs(){
         ArrayList<Mob> mobs = new ArrayList<>();
         for (int i = 0; i < RandomParameters.mobsAmmount(); i++){
@@ -29,24 +32,30 @@ public class Factory {
         }
         return mobs;
     }
+
     public static Equipment newRandomEquipment(){
         return new Equipment("Bag", newRandomWeapon(), newRandomArmor(), newArrayListOfSpells());
     }
+
     public static ArrayList<Spell> newArrayListOfSpells(){
         ArrayList<Spell> spells  = new ArrayList<>();
         for (int i = 0; i < RandomParameters.spellAmmount(); i++)
             spells.add(new HealSpell(RandomParameters.healStrength()));
         return spells;
     }
+
     public static Weapon newRandomWeapon(){
         return new Weapon(RandomParameters.weaponName(), RandomParameters.damage());
     }
+
     public static Armor newRandomArmor(){
         return new Armor(RandomParameters.armorName(), RandomParameters.def());
     }
+
     public static Field newRandomField() throws Exception {
         return new Field("Random Game Field", RandomParameters.rows(), RandomParameters.cols());
     }
+
     public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton, ReentrantLock lock) throws Exception {
         return new ExpeditionController(newRandomField(), character, newRandomMobs(), field, equipment, expeditionButton, autoExpeditionButton, lock);
     }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Field extends GameObject {
+
     private Creature[][] field;
 
     public Field(String name, int rows, int cols) throws Exception {
@@ -17,19 +18,24 @@ public class Field extends GameObject {
             throw new Exception("Impossible field");
         field = new Creature[rows][cols];
     }
+
     public Creature getCreature(Coordinates creatureCoords){
         return field[creatureCoords.getY()][creatureCoords.getX()];
     }
+
     public void removeCreature(Coordinates creatureCoords){
         field[creatureCoords.getY()][creatureCoords.getX()] = null;
     }
+
     public void insertRandomly(ArrayList<Mob> mobs){
         for (Creature creature : mobs)
             insertRandomly(creature);
     }
+
     public void insertRandomly(Character character){
         insertRandomly((Creature) character);
     }
+
     public void insertRandomly(Creature creature){
         Random random = new Random();
         int row, col;
@@ -39,6 +45,7 @@ public class Field extends GameObject {
         } while (field[row][col] != null);
         field[row][col] = creature;
     }
+
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder("# ".repeat((field[0].length + 2)));
@@ -76,6 +83,7 @@ public class Field extends GameObject {
         field[newCoords.getY()][newCoords.getX()] = field[oldCoords.getY()][oldCoords.getX()];
         field[oldCoords.getY()][oldCoords.getX()] = null;
     }
+
     public int getRows() {
         return getField().length;
     }

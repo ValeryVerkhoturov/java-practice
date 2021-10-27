@@ -4,11 +4,14 @@ import com.company.practice3.game.gameObjects.GameObject;
 import com.company.practice3.game.gameObjects.equipment.Equipment;
 
 public abstract class Creature extends GameObject {
-    private int hp;
-    private Equipment equipment;
-    private int atk;
-    private double aps;
 
+    private int hp;
+
+    private Equipment equipment;
+
+    private int atk;
+
+    private double aps;
 
     public Creature(String name, int hp, Equipment equipment, int atk, double aps) {
         super(name);

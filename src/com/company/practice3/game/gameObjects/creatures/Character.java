@@ -4,9 +4,11 @@ import com.company.practice3.game.gameObjects.equipment.Equipment;
 import com.company.practice3.game.gameObjects.equipment.spells.Spell;
 
 public class Character extends Creature {
+
     public Character(String name, int hp, Equipment equipment, int atk, double aps) {
         super(name, hp, equipment, atk, aps);
     }
+
     public String printStats(){
         StringBuilder out = new StringBuilder("Имя " + getName() + "\n" +
                 "Здоровье " + getHp() + "\n" +
@@ -27,6 +29,7 @@ public class Character extends Creature {
                 .append("Замах ").append(String.format("%,.2f", getAps())).append("\n");
         return out.toString();
     }
+
     public void castHealSpell(){
         if (getEquipment().getSpells().size() > 0){
             Spell spell = getEquipment().getSpells().stream().findFirst().get();
@@ -34,6 +37,7 @@ public class Character extends Creature {
             getEquipment().getSpells().remove(spell);
         }
     }
+
     @Override
     public char viewOnMap() {
         return '@';

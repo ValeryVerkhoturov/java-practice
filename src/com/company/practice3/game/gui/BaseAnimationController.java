@@ -4,10 +4,10 @@ import javafx.application.Platform;
 import javafx.scene.control.Label;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BaseAnimationController implements Runnable {
+
     private final Label label;
 
     private final ReentrantLock lock;
