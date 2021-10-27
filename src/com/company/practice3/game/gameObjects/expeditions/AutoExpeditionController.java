@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class AutoExpeditionController implements Runnable{
     private Character character;
@@ -17,16 +18,20 @@ public class AutoExpeditionController implements Runnable{
     private Label equipmentLbl;
     private Button expeditionBtn;
     private Button autoExpeditionBtn;
-    public AutoExpeditionController(Character character, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn){
+    private ReentrantLock lock;
+
+    public AutoExpeditionController(Character character, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn, ReentrantLock lock){
         this.character = character;
         this.fieldLbl = fieldLbl;
         this.equipmentLbl = equipmentLbl;
         this.expeditionBtn = expeditionBtn;
         this.autoExpeditionBtn = autoExpeditionBtn;
+        this.lock = lock;
     }
 
     @Override
     public void run() {
+        lock.lock();
         Platform.runLater(() -> expeditionBtn.setDisable(true));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(true));
         Platform.runLater(() -> fieldLbl.setText(ASCIIart.autoExpedition));
@@ -39,8 +44,8 @@ public class AutoExpeditionController implements Runnable{
             e.printStackTrace();
         }
         Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
-        Platform.runLater(() -> fieldLbl.setText(ASCIIart.base));
         Platform.runLater(() -> expeditionBtn.setDisable(false));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(false));
+        lock.unlock();
     }
 }

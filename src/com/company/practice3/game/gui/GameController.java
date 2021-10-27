@@ -7,7 +7,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class GameController {
+    private ReentrantLock mutex;
     private Character character;
     @FXML
     private Label battleField;
@@ -19,15 +22,17 @@ public class GameController {
     private Button autoExpedition;
     @FXML
     private void initialize(){
-        battleField.setText(ASCIIart.base);
+//        battleField.setText(ASCIIart.base);
         character = Factory.newDefaultCharacter();
         equipment.setText(character.printStats());
+        mutex = new ReentrantLock();
+        runBaseCoffeAnimation();
     }
     @FXML
     private void runExpedition() throws Exception {
         Thread thread = new Thread(
                 Factory.newRandomExpeditionController(
-                        character, battleField, equipment, expedition, autoExpedition));
+                        character, battleField, equipment, expedition, autoExpedition, mutex));
         thread.setName("Экспедиция");
         thread.start();
     }
@@ -35,8 +40,13 @@ public class GameController {
     private void runAutoExpedition(){
         Thread thread = new Thread(
                 new AutoExpeditionController(
-                        character, battleField, equipment, expedition, autoExpedition));
+                        character, battleField, equipment, expedition, autoExpedition, mutex));
         thread.setName("Автоэкспедиция");
+        thread.start();
+    }
+    private void runBaseCoffeAnimation(){
+        Thread thread = new Thread(new BaseAnimationController(battleField, mutex));
+        thread.setName("Анимация кофе на базе");
         thread.start();
     }
 }

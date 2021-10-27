@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class Factory {
     public static Character newDefaultCharacter(){
@@ -47,7 +48,7 @@ public class Factory {
     public static Field newRandomField() throws Exception {
         return new Field("Random Game Field", RandomParameters.rows(), RandomParameters.cols());
     }
-    public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton) throws Exception {
-        return new ExpeditionController(newRandomField(), character, newRandomMobs(), field, equipment, expeditionButton, autoExpeditionButton);
+    public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton, ReentrantLock lock) throws Exception {
+        return new ExpeditionController(newRandomField(), character, newRandomMobs(), field, equipment, expeditionButton, autoExpeditionButton, lock);
     }
 }
