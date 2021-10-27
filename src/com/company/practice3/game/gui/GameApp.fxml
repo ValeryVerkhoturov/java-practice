@@ -5,13 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.practice3.game.gui.GameController">
-  <Label fx:id="battleField" alignment="CENTER" layoutX="14.0" layoutY="31.0" prefHeight="338.0" prefWidth="343.0" style="-fx-font-family: Monospaced" text="Battle field">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.practice3.game.gui.GameController">
+  <Label fx:id="battleField" alignment="CENTER" layoutX="14.0" layoutY="31.0" mouseTransparent="true" prefHeight="349.0" prefWidth="321.0" style="-fx-font-family: Monospaced" text="Поле боя" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="31.0">
       <font>
          <Font size="18.0" />
       </font></Label>
-  <Label fx:id="equipment" alignment="TOP_LEFT" layoutX="381.0" layoutY="72.0" prefHeight="297.0" prefWidth="247.0" style="-fx-font-family: Monospaced" text="Экипировка" />
-  <Button fx:id="expedition" layoutX="381.0" layoutY="26.0" mnemonicParsing="false" onAction="#runExpedition" prefHeight="25.0" prefWidth="92.0" text="Экспедиция" />
-  <Button fx:id="autoExpedition" layoutX="489.0" layoutY="26.0" mnemonicParsing="false" onAction="#runAutoExpedition" prefHeight="25.0" prefWidth="111.0" text="Автоэкспедиция" />
+  <Label fx:id="equipment" alignment="TOP_LEFT" layoutX="349.0" layoutY="74.0" prefHeight="303.0" prefWidth="279.0" style="-fx-font-family: Monospaced" text="Экипировка" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="74.0" />
+  <Button fx:id="expedition" layoutX="381.0" layoutY="26.0" mnemonicParsing="false" onAction="#runExpedition" prefHeight="25.0" prefWidth="92.0" text="Экспедиция" AnchorPane.rightAnchor="167.0" AnchorPane.topAnchor="26.0" />
+  <Button fx:id="autoExpedition" layoutX="497.0" layoutY="26.0" mnemonicParsing="false" onAction="#runAutoExpedition" prefHeight="25.0" prefWidth="111.0" text="Автоэкспедиция" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="26.0" />
 </AnchorPane>
