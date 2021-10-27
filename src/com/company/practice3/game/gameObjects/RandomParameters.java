@@ -25,16 +25,16 @@ class RandomParameters {
         return random.nextInt(15) + 15;
     }
     public static int hp(){
-        return random.nextInt(50) + 1;
+        return random.nextInt(25) + 25;
     }
     public static int atk(){
-        return random.nextInt(25) + 1;
+        return random.nextInt(5) + 20;
     }
     public static double aps(){
         return random.nextDouble() + 0.5;
     }
     public static int def(){
-        return random.nextInt(10);
+        return random.nextInt(5);
     }
     public static int rows(){
         return random.nextInt(5) + 6;
