@@ -3,7 +3,6 @@ package com.company.practice3.game.gameObjects.expeditions;
 import com.company.practice3.game.gameObjects.creatures.CharacterController;
 import com.company.practice3.game.gameObjects.creatures.Mob;
 import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gui.ASCIIart;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -42,6 +41,8 @@ public class ExpeditionController implements Runnable{
 
     @Override
     public void run() {
+        if(!character.isAlive())
+            return;
         lock.lock();
         Platform.runLater(() -> expeditionBtn.setDisable(true));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(true));

@@ -37,6 +37,8 @@ public class AutoExpeditionController implements Runnable{
 
     @Override
     public void run() {
+        if (!character.isAlive())
+            return;
         lock.lock();
         Platform.runLater(() -> expeditionBtn.setDisable(true));
         Platform.runLater(() -> autoExpeditionBtn.setDisable(true));
