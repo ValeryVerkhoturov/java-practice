@@ -27,7 +27,10 @@ public class ExpeditionController implements Runnable{
 
     private final ReentrantLock lock;
 
-    public ExpeditionController(Field field, Character character, ArrayList<Mob> mobs, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn, ReentrantLock lock) {
+    public ExpeditionController(Field field, Character character,
+                                ArrayList<Mob> mobs, Label fieldLbl,
+                                Label equipmentLbl, Button expeditionBtn,
+                                Button autoExpeditionBtn, ReentrantLock lock) {
         this.field = field;
         this.character = character;
         this.field.insertRandomly(character);
@@ -51,6 +54,7 @@ public class ExpeditionController implements Runnable{
         try {
             Thread characterThread = new Thread(new CharacterController(character, field));
             characterThread.setName("Персонаж");
+            characterThread.setDaemon(true);
             characterThread.start();
             while (characterThread.isAlive()){
                 Platform.runLater(() -> fieldLbl.setText(field.toString()));

@@ -41,6 +41,7 @@ public class GameController {
                         character, battleField, equipment,
                         expedition, autoExpedition, mutex));
         thread.setName("Экспедиция");
+        thread.setDaemon(true);
         thread.start();
     }
 
@@ -51,6 +52,7 @@ public class GameController {
                         character, battleField, equipment,
                         expedition, autoExpedition, mutex));
         thread.setName("Автоэкспедиция");
+        thread.setDaemon(true);
         thread.start();
     }
 
@@ -60,6 +62,7 @@ public class GameController {
                         battleField, mutex, character,
                         expedition, autoExpedition));
         thread.setName("Анимация кофе на базе");
+        thread.setDaemon(true);
         thread.start();
     }
 }
