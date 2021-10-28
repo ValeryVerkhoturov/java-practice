@@ -6,41 +6,28 @@ import com.company.practice3.game.gameObjects.creatures.Character;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import lombok.Data;
+import lombok.NonNull;
 
-import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+@Data
 public class ExpeditionController implements Runnable{
 
-    private final Field field;
+    @NonNull private final Field field;
 
-    private final Character character;
+    @NonNull private final Character character;
 
-    private final Label fieldLbl;
+    @NonNull private final Label fieldLbl;
 
-    private final Label equipmentLbl;
+    @NonNull private final Label equipmentLbl;
 
-    private final Button expeditionBtn;
+    @NonNull private final Button expeditionBtn;
 
-    private final Button autoExpeditionBtn;
+    @NonNull private final Button autoExpeditionBtn;
 
-    private final ReentrantLock lock;
-
-    public ExpeditionController(Field field, Character character,
-                                ArrayList<Mob> mobs, Label fieldLbl,
-                                Label equipmentLbl, Button expeditionBtn,
-                                Button autoExpeditionBtn, ReentrantLock lock) {
-        this.field = field;
-        this.character = character;
-        this.field.insertRandomly(character);
-        this.field.insertRandomly(mobs);
-        this.fieldLbl = fieldLbl;
-        this.equipmentLbl = equipmentLbl;
-        this.expeditionBtn = expeditionBtn;
-        this.autoExpeditionBtn = autoExpeditionBtn;
-        this.lock = lock;
-    }
+    @NonNull private final ReentrantLock lock;
 
     @Override
     public void run() {

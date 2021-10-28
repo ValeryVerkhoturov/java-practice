@@ -59,8 +59,8 @@ public class GameController {
     private void runBaseCoffeAnimation(){
         Thread thread = new Thread(
                 new BaseAnimationController(
-                        battleField, mutex, character,
-                        expedition, autoExpedition));
+                        character, battleField,
+                        expedition, autoExpedition, mutex));
         thread.setName("Анимация кофе на базе");
         thread.setDaemon(true);
         thread.start();

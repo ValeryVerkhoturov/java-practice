@@ -58,7 +58,10 @@ public class Factory {
     }
 
     public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton, ReentrantLock lock) throws Exception {
-        return new ExpeditionController(newRandomField(), character, newRandomMobs(), field, equipment, expeditionButton, autoExpeditionButton, lock);
+        Field fieldForCharacterAndMobs = newRandomField();
+        fieldForCharacterAndMobs.insertRandomly(character);
+        fieldForCharacterAndMobs.insertRandomly(newRandomMobs());
+        return new ExpeditionController(fieldForCharacterAndMobs, character, field, equipment, expeditionButton, autoExpeditionButton, lock);
     }
 
     public static AutoExpeditionController newRandomAutoExpedtionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpedition, ReentrantLock lock){

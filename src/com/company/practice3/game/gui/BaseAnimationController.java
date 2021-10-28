@@ -4,42 +4,37 @@ import com.company.practice3.game.gameObjects.creatures.Character;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import lombok.Data;
+import lombok.NonNull;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+@Data
 public class BaseAnimationController implements Runnable {
 
-    private final Character character;
+    @NonNull private final Character character;
 
-    private final Label label;
+    @NonNull private final Label field;
 
-    private final ReentrantLock lock;
+    @NonNull private final Button expedition;
 
-    private final Button expedition;
+    @NonNull private final Button autoExpedition;
 
-    private final Button autoExpedition;
-
-    public BaseAnimationController(Label label, ReentrantLock lock, Character character, Button expedition, Button autoExpedition){
-        this.label = label;
-        this.lock = lock;
-        this.character = character;
-        this.expedition = expedition;
-        this.autoExpedition = autoExpedition;
-    }
+    @NonNull private final ReentrantLock lock;
 
     @Override
     public void run() {
         while (true){
             if (!character.isAlive() && !lock.isLocked()){
-                Platform.runLater(() -> label.setText(AsciiArt.death));
+                Platform.runLater(() -> field.setText(AsciiArt.death));
                 Platform.runLater(() -> expedition.setDisable(true));
                 Platform.runLater(() -> autoExpedition.setDisable(true));
                 return;
             }
             for (String art: AsciiArt.baseAnimation) {
                 if (!lock.isLocked())
-                    Platform.runLater(() -> label.setText(art));
+                    Platform.runLater(() -> field.setText(art));
                 try {
                     TimeUnit.MILLISECONDS.sleep(500);
                 } catch (InterruptedException e) {

@@ -2,10 +2,15 @@ package com.company.practice3.game.gameObjects.equipment;
 
 import com.company.practice3.game.gameObjects.GameObject;
 import com.company.practice3.game.gameObjects.equipment.spells.Spell;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 
-
+@EqualsAndHashCode(callSuper = true)
+@Data
+@NoArgsConstructor
 public class Equipment extends GameObject {
 
     private Weapon weapon;
@@ -18,30 +23,6 @@ public class Equipment extends GameObject {
         super(name);
         this.weapon = weapon;
         this.armor = armor;
-        this.spells = spells;
-    }
-
-    public Weapon getWeapon() {
-        return weapon;
-    }
-
-    public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
-    }
-
-    public Armor getArmor() {
-        return armor;
-    }
-
-    public void setArmor(Armor armor) {
-        this.armor = armor;
-    }
-
-    public ArrayList<Spell> getSpells() {
-        return spells;
-    }
-
-    public void setSpells(ArrayList<Spell> spells) {
         this.spells = spells;
     }
 

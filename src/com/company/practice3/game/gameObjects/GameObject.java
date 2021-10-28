@@ -1,20 +1,18 @@
 package com.company.practice3.game.gameObjects;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+@Data
+@NoArgsConstructor
 public abstract class GameObject {
 
-    private String name;
-
-    public GameObject(String name) {
+    public GameObject(@NonNull String name) {
         this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    @NonNull private String name;
 
     public char viewOnMap(){
         return 'U'; // Undefined

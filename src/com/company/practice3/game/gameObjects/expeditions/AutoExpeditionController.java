@@ -1,42 +1,34 @@
 package com.company.practice3.game.gameObjects.expeditions;
 
 import com.company.practice3.game.gameLogic.FightLogic;
-import com.company.practice3.game.gameObjects.Factory;
 import com.company.practice3.game.gameObjects.creatures.Character;
 import com.company.practice3.game.gameObjects.creatures.Mob;
 import com.company.practice3.game.gui.AsciiArt;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import lombok.Data;
+import lombok.NonNull;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+@Data
 public class AutoExpeditionController implements Runnable{
 
-    private final Character character;
+    @NonNull private final Character character;
 
-    private final Label fieldLbl;
+    @NonNull private final Label fieldLbl;
 
-    private final Label equipmentLbl;
+    @NonNull private final Label equipmentLbl;
 
-    private final Button expeditionBtn;
+    @NonNull private final Button expeditionBtn;
 
-    private final Button autoExpeditionBtn;
+    @NonNull private final Button autoExpeditionBtn;
 
-    private final ReentrantLock lock;
+    @NonNull private final ReentrantLock lock;
 
-    private final Mob mob;
-
-    public AutoExpeditionController(Character character, Label fieldLbl, Label equipmentLbl, Button expeditionBtn, Button autoExpeditionBtn, ReentrantLock lock, Mob mob){
-        this.character = character;
-        this.fieldLbl = fieldLbl;
-        this.equipmentLbl = equipmentLbl;
-        this.expeditionBtn = expeditionBtn;
-        this.autoExpeditionBtn = autoExpeditionBtn;
-        this.lock = lock;
-        this.mob = mob;
-    }
+    @NonNull private final Mob mob;
 
     @Override
     public void run() {

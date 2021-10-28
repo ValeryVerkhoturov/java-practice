@@ -4,13 +4,15 @@ import com.company.practice3.game.gameObjects.GameObject;
 import com.company.practice3.game.gameObjects.creatures.Character;
 import com.company.practice3.game.gameObjects.creatures.Creature;
 import com.company.practice3.game.gameObjects.creatures.Mob;
+import lombok.Getter;
+import lombok.NonNull;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Field extends GameObject {
 
-    private Creature[][] field;
+    @Getter private Creature[][] field;
 
     public Field(String name, int rows, int cols) throws Exception {
         super(name);
@@ -19,7 +21,7 @@ public class Field extends GameObject {
         field = new Creature[rows][cols];
     }
 
-    public Creature getCreature(Coordinates creatureCoords){
+    public Creature getCreature(@NonNull Coordinates creatureCoords){
         return field[creatureCoords.getY()][creatureCoords.getX()];
     }
 
@@ -63,20 +65,6 @@ public class Field extends GameObject {
         stringBuilder.append("\n");
         stringBuilder.append("# ".repeat(field[0].length + 2));
         return stringBuilder.toString();
-    }
-
-    public Creature[][] getField() {
-        return field;
-    }
-
-    private void setField(Creature[][] field) {
-        this.field = field;
-    }
-
-    public void setCell(Coordinates coordinates, Creature creature) throws Exception {
-        if (field[coordinates.getY()][coordinates.getX()] != null)
-            throw new Exception("Cell with " + coordinates + " is not empty");
-        field[coordinates.getY()][coordinates.getX()] = creature;
     }
 
     public void moveCell(Coordinates oldCoords, Coordinates newCoords){
