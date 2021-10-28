@@ -1,7 +1,7 @@
-package com.company.practice3.game.gameObjects.creatures;
+package com.company.practice3.game.objects.creatures;
 
-import com.company.practice3.game.gameObjects.equipment.Equipment;
-import com.company.practice3.game.gameObjects.equipment.spells.Spell;
+import com.company.practice3.game.objects.equipment.Equipment;
+import com.company.practice3.game.objects.equipment.spells.Spell;
 
 public class Character extends Creature {
 

@@ -1,6 +1,6 @@
-package com.company.practice3.game.gameObjects.equipment.spells;
+package com.company.practice3.game.objects.equipment.spells;
 
-import com.company.practice3.game.gameObjects.GameObject;
+import com.company.practice3.game.objects.GameObject;
 
 public class HealSpell extends GameObject implements Spell {
 

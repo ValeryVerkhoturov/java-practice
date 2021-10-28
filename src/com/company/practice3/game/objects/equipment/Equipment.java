@@ -1,7 +1,7 @@
-package com.company.practice3.game.gameObjects.equipment;
+package com.company.practice3.game.objects.equipment;
 
-import com.company.practice3.game.gameObjects.GameObject;
-import com.company.practice3.game.gameObjects.equipment.spells.Spell;
+import com.company.practice3.game.objects.GameObject;
+import com.company.practice3.game.objects.equipment.spells.Spell;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;

@@ -1,7 +1,7 @@
-package com.company.practice3.game.gameObjects.creatures;
+package com.company.practice3.game.objects.creatures;
 
-import com.company.practice3.game.gameObjects.GameObject;
-import com.company.practice3.game.gameObjects.equipment.Equipment;
+import com.company.practice3.game.objects.GameObject;
+import com.company.practice3.game.objects.equipment.Equipment;
 import lombok.*;
 import org.jetbrains.annotations.NotNull;
 

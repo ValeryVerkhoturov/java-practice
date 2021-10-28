@@ -1,71 +1,74 @@
-package com.company.practice3.game.gameObjects;
+package com.company.practice3.game.objects;
+
+import lombok.experimental.UtilityClass;
 
 import java.util.Random;
 
+@UtilityClass
 class RandomParameters {
 
-    private static final Random random = new Random();
+    private final Random random = new Random();
 
-    private final static String[] creatureNames = {
+    private final String[] creatureNames = {
             "Lynn Mcnally", "Michael Devereux", "Lurker Kanti", "Ben Radcliff", "Ankle-nibbler Drake",
             "Clamper Shadow", "Gage Whitlock", "Crimson Lynn", "Dead-head Dracula"};
 
-    private final static String[] weaponNames = {
+    private final String[] weaponNames = {
             "Unholy Might", "Scalpel", "Shadowsteel", "Timeworn Defender", "Stormguard Katana",
             "Diamond Spellblade", "Scar", " Carver of Darkness"};
 
-    private final static String[] armorNames = {"Chestplate of Doomed Comrades", "Batteplate of Punishment",
+    private final String[] armorNames = {"Chestplate of Doomed Comrades", "Batteplate of Punishment",
             "Iron Tunic", "Skeletal Chestplate", "Oathkeeper's Cuirass", "Desolation Cuirass"};
 
-    public static String creatureName(){
+    public String creatureName(){
         return creatureNames[random.nextInt(creatureNames.length)];
     }
 
-    public static String weaponName(){
+    public String weaponName(){
         return weaponNames[random.nextInt(weaponNames.length)];
     }
 
-    public static String armorName(){
+    public String armorName(){
         return armorNames[random.nextInt(armorNames.length)];
     }
 
-    public static int damage(){
+    public int damage(){
         return random.nextInt(15) + 15;
     }
 
-    public static int hp(){
+    public int hp(){
         return random.nextInt(25) + 25;
     }
 
-    public static int atk(){
+    public int atk(){
         return random.nextInt(5) + 20;
     }
 
-    public static double aps(){
+    public double aps(){
         return random.nextDouble() + 0.5;
     }
 
-    public static int def(){
+    public int def(){
         return random.nextInt(5);
     }
 
-    public static int rows(){
+    public int rows(){
         return random.nextInt(5) + 6;
     }
 
-    public static int cols(){
+    public int cols(){
         return random.nextInt(5) + 6;
     }
 
-    public static int mobsAmmount(){
+    public int mobsAmmount(){
         return random.nextInt(5) + 5;
     }
 
-    public static int healStrength(){
+    public int healStrength(){
         return random.nextInt(5) + 1;
     }
 
-    public static int spellAmmount(){
+    public int spellAmmount(){
         return random.nextInt(3);
     }
 }

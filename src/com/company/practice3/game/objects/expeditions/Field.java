@@ -1,9 +1,9 @@
-package com.company.practice3.game.gameObjects.expeditions;
+package com.company.practice3.game.objects.expeditions;
 
-import com.company.practice3.game.gameObjects.GameObject;
-import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.creatures.Creature;
-import com.company.practice3.game.gameObjects.creatures.Mob;
+import com.company.practice3.game.objects.GameObject;
+import com.company.practice3.game.objects.creatures.Character;
+import com.company.practice3.game.objects.creatures.Creature;
+import com.company.practice3.game.objects.creatures.Mob;
 import lombok.Getter;
 import lombok.NonNull;
 

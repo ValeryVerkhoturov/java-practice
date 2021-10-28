@@ -1,7 +1,7 @@
-package com.company.practice3.game.gameObjects.expeditions;
+package com.company.practice3.game.objects.expeditions;
 
-import com.company.practice3.game.gameObjects.creatures.CharacterController;
-import com.company.practice3.game.gameObjects.creatures.Character;
+import com.company.practice3.game.objects.creatures.CharacterController;
+import com.company.practice3.game.objects.creatures.Character;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-package com.company.practice3.game.gameObjects.expeditions;
+package com.company.practice3.game.objects.expeditions;
 
 import lombok.Data;
 import lombok.NonNull;

@@ -1,17 +1,19 @@
-package com.company.practice3.game.gameLogic;
+package com.company.practice3.game.logic;
 
-import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.creatures.Creature;
-import com.company.practice3.game.gameObjects.creatures.Mob;
-import com.company.practice3.game.gameObjects.expeditions.Coordinates;
-import com.company.practice3.game.gameObjects.expeditions.Field;
+import com.company.practice3.game.objects.creatures.Character;
+import com.company.practice3.game.objects.creatures.Creature;
+import com.company.practice3.game.objects.creatures.Mob;
+import com.company.practice3.game.objects.expeditions.Coordinates;
+import com.company.practice3.game.objects.expeditions.Field;
+import lombok.experimental.UtilityClass;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
+@UtilityClass
 public class ExpeditionLogic {
 
-    public static void expeditionLoop(Character character, Field field) throws Exception {
+    public void expeditionLoop(Character character, Field field) throws Exception {
         Coordinates mobCoordinates = findCloseMob(character, field);
         while (mobCoordinates != null && character.isAlive()){
             goToMob(character, field);
@@ -21,7 +23,7 @@ public class ExpeditionLogic {
         }
     }
 
-    public static Coordinates searchCreatureCoordinates(Creature creature, Field field) throws Exception {
+    public Coordinates searchCreatureCoordinates(Creature creature, Field field) throws Exception {
         for (int i = 0; i < field.getField().length; i++)
             for (int j = 0; j < field.getField()[0].length; j++)
                 if (field.getField()[i][j] == creature)
@@ -29,7 +31,7 @@ public class ExpeditionLogic {
         throw new Exception("Character cannot find himself");
     }
 
-    public static Coordinates findCloseMob(Character character, Field field) throws Exception {
+    public Coordinates findCloseMob(Character character, Field field) throws Exception {
         Coordinates characterCoords = searchCreatureCoordinates(character, field);
         double minDistance = Math.max(field.getRows(), field.getCols());
         Coordinates closeMobCoords = null;
@@ -43,7 +45,7 @@ public class ExpeditionLogic {
         return closeMobCoords;
     }
 
-    public static void goToMob(Character  character, Field field) throws Exception {
+    public void goToMob(Character  character, Field field) throws Exception {
         Coordinates characterCoords = searchCreatureCoordinates(character, field);
         Coordinates mobCoords = findCloseMob(character, field);
         while (Math.abs(characterCoords.getX() - mobCoords.getX()) > 1 || Math.abs(characterCoords.getY() - mobCoords.getY()) > 1 ||

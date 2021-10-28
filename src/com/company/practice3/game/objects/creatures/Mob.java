@@ -1,6 +1,6 @@
-package com.company.practice3.game.gameObjects.creatures;
+package com.company.practice3.game.objects.creatures;
 
-import com.company.practice3.game.gameObjects.equipment.Equipment;
+import com.company.practice3.game.objects.equipment.Equipment;
 
 public class Mob extends Creature {
 

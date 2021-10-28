@@ -1,4 +1,4 @@
-package com.company.practice3.game.gameObjects.equipment.spells;
+package com.company.practice3.game.objects.equipment.spells;
 
 public interface Spell {
     String getName();

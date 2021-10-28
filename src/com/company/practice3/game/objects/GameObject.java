@@ -1,4 +1,4 @@
-package com.company.practice3.game.gameObjects;
+package com.company.practice3.game.objects;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

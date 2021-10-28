@@ -1,6 +1,6 @@
 package com.company.practice3.game.gui;
 
-import com.company.practice3.game.gameObjects.creatures.Character;
+import com.company.practice3.game.objects.creatures.Character;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

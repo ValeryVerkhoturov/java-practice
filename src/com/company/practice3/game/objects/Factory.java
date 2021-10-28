@@ -1,32 +1,34 @@
-package com.company.practice3.game.gameObjects;
+package com.company.practice3.game.objects;
 
-import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.creatures.Mob;
-import com.company.practice3.game.gameObjects.equipment.Equipment;
-import com.company.practice3.game.gameObjects.equipment.Armor;
-import com.company.practice3.game.gameObjects.equipment.Weapon;
-import com.company.practice3.game.gameObjects.equipment.spells.HealSpell;
-import com.company.practice3.game.gameObjects.equipment.spells.Spell;
-import com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController;
-import com.company.practice3.game.gameObjects.expeditions.ExpeditionController;
-import com.company.practice3.game.gameObjects.expeditions.Field;
+import com.company.practice3.game.objects.creatures.Character;
+import com.company.practice3.game.objects.creatures.Mob;
+import com.company.practice3.game.objects.equipment.Equipment;
+import com.company.practice3.game.objects.equipment.Armor;
+import com.company.practice3.game.objects.equipment.Weapon;
+import com.company.practice3.game.objects.equipment.spells.HealSpell;
+import com.company.practice3.game.objects.equipment.spells.Spell;
+import com.company.practice3.game.objects.expeditions.AutoExpeditionController;
+import com.company.practice3.game.objects.expeditions.ExpeditionController;
+import com.company.practice3.game.objects.expeditions.Field;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import lombok.experimental.UtilityClass;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;
 
+@UtilityClass
 public class Factory {
 
-    public static Character newDefaultCharacter(){
+    public Character newDefaultCharacter(){
         return new Character(RandomParameters.creatureName(), 100, newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
 
-    public static Mob newRandomMob(){
+    public Mob newRandomMob(){
         return new Mob(RandomParameters.creatureName(), RandomParameters.hp(), newRandomEquipment(), RandomParameters.atk(), RandomParameters.aps());
     }
 
-    public static ArrayList<Mob> newRandomMobs(){
+    public ArrayList<Mob> newRandomMobs(){
         ArrayList<Mob> mobs = new ArrayList<>();
         for (int i = 0; i < RandomParameters.mobsAmmount(); i++){
             mobs.add(newRandomMob());
@@ -34,37 +36,37 @@ public class Factory {
         return mobs;
     }
 
-    public static Equipment newRandomEquipment(){
+    public Equipment newRandomEquipment(){
         return new Equipment("Bag", newRandomWeapon(), newRandomArmor(), newArrayListOfSpells());
     }
 
-    public static ArrayList<Spell> newArrayListOfSpells(){
+    public ArrayList<Spell> newArrayListOfSpells(){
         ArrayList<Spell> spells  = new ArrayList<>();
         for (int i = 0; i < RandomParameters.spellAmmount(); i++)
             spells.add(new HealSpell(RandomParameters.healStrength()));
         return spells;
     }
 
-    public static Weapon newRandomWeapon(){
+    public Weapon newRandomWeapon(){
         return new Weapon(RandomParameters.weaponName(), RandomParameters.damage());
     }
 
-    public static Armor newRandomArmor(){
+    public Armor newRandomArmor(){
         return new Armor(RandomParameters.armorName(), RandomParameters.def());
     }
 
-    public static Field newRandomField() throws Exception {
+    public Field newRandomField() throws Exception {
         return new Field("Random Game Field", RandomParameters.rows(), RandomParameters.cols());
     }
 
-    public static ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton, ReentrantLock lock) throws Exception {
+    public ExpeditionController newRandomExpeditionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpeditionButton, ReentrantLock lock) throws Exception {
         Field fieldForCharacterAndMobs = newRandomField();
         fieldForCharacterAndMobs.insertRandomly(character);
         fieldForCharacterAndMobs.insertRandomly(newRandomMobs());
         return new ExpeditionController(fieldForCharacterAndMobs, character, field, equipment, expeditionButton, autoExpeditionButton, lock);
     }
 
-    public static AutoExpeditionController newRandomAutoExpedtionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpedition, ReentrantLock lock){
+    public AutoExpeditionController newRandomAutoExpedtionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpedition, ReentrantLock lock){
         return new AutoExpeditionController(character, field, equipment, expeditionButton, autoExpedition, lock, newRandomMob());
     }
 }

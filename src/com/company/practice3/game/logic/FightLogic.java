@@ -1,17 +1,19 @@
-package com.company.practice3.game.gameLogic;
+package com.company.practice3.game.logic;
 
-import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.creatures.Mob;
-import com.company.practice3.game.gameObjects.equipment.Equipment;
-import com.company.practice3.game.gameObjects.expeditions.Coordinates;
-import com.company.practice3.game.gameObjects.expeditions.Field;
+import com.company.practice3.game.objects.creatures.Character;
+import com.company.practice3.game.objects.creatures.Mob;
+import com.company.practice3.game.objects.equipment.Equipment;
+import com.company.practice3.game.objects.expeditions.Coordinates;
+import com.company.practice3.game.objects.expeditions.Field;
+import lombok.experimental.UtilityClass;
 
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
+@UtilityClass
 public class FightLogic {
 
-    public static void fight(Character character, Field field) throws Exception {
+    public void fight(Character character, Field field) throws Exception {
         Coordinates mobCoords = ExpeditionLogic.findCloseMob(character, field);
         Mob mob = (Mob) field.getCreature(mobCoords);
         while (character.isAlive() && mob.isAlive()){
@@ -31,7 +33,7 @@ public class FightLogic {
 
     }
 
-    public static void lootMob(Character character, Mob mob){
+    public void lootMob(Character character, Mob mob){
         Equipment charcterEquipment = character.getEquipment();
         Equipment mobEquipment = mob.getEquipment();
         if (mobEquipment.getWeapon().getDamage() > charcterEquipment.getWeapon().getDamage())

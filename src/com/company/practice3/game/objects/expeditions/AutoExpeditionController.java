@@ -1,8 +1,8 @@
-package com.company.practice3.game.gameObjects.expeditions;
+package com.company.practice3.game.objects.expeditions;
 
-import com.company.practice3.game.gameLogic.FightLogic;
-import com.company.practice3.game.gameObjects.creatures.Character;
-import com.company.practice3.game.gameObjects.creatures.Mob;
+import com.company.practice3.game.logic.FightLogic;
+import com.company.practice3.game.objects.creatures.Character;
+import com.company.practice3.game.objects.creatures.Mob;
 import com.company.practice3.game.gui.AsciiArt;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
