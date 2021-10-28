@@ -25,18 +25,18 @@ public class BaseAnimationController implements Runnable {
 
     @Override
     public void run() {
+        String[] asciiArt = AsciiArt.baseAnimation;
         while (true){
             if (!character.isAlive() && !lock.isLocked()){
-                Platform.runLater(() -> field.setText(AsciiArt.death));
                 Platform.runLater(() -> expedition.setDisable(true));
                 Platform.runLater(() -> autoExpedition.setDisable(true));
-                return;
+                asciiArt = AsciiArt.deathAnimation;
             }
-            for (String art: AsciiArt.baseAnimation) {
+            for (String art: asciiArt) {
                 if (!lock.isLocked())
                     Platform.runLater(() -> field.setText(art));
                 try {
-                    TimeUnit.MILLISECONDS.sleep(500);
+                    TimeUnit.MILLISECONDS.sleep(300);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

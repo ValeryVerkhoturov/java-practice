@@ -8,9 +8,9 @@ import lombok.ToString;
 @ToString
 public class Coordinates {
 
-    private int x;
+    @NonNull private int x;
 
-    private int y;
+    @NonNull private int y;
 
     public double distanceTo(Coordinates coords){
         return Math.sqrt(Math.pow(coords.getX() - getX(), 2) + Math.pow(coords.getY() - getY(), 2));
