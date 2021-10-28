@@ -3,571 +3,556 @@
   <ID>JAVA</ID>
   <OriginalElement>com.company.practice3.game</OriginalElement>
   <nodes>
-    <node x="249.5" y="744.0">com.company.practice3.game.gui.AsciiArt</node>
-    <node x="373.49999999999994" y="827.0">com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController</node>
-    <node x="793.3249999999999" y="661.0">com.company.practice3.game.gameLogic.ExpeditionLogic</node>
-    <node x="1011.5820512820497" y="473.0">com.company.practice3.game.gameObjects.expeditions.Field</node>
-    <node x="867.919931068932" y="81.0">com.company.practice3.game.gameObjects.equipment.Armor</node>
-    <node x="731.1251545121536" y="350.0">com.company.practice3.game.gameObjects.creatures.Mob</node>
-    <node x="633.2985024975034" y="0.0">com.company.practice3.game.gameObjects.GameObject</node>
-    <node x="834.1251545121536" y="350.0">com.company.practice3.game.gameObjects.expeditions.Coordinates</node>
-    <node x="105.25015451215359" y="1033.0">com.company.practice3.game.gui.GameController</node>
-    <node x="1064.5092167832177" y="81.0">com.company.practice3.game.gameObjects.equipment.Weapon</node>
-    <node x="519.1445512820497" y="350.0">com.company.practice3.game.gameObjects.creatures.Character</node>
-    <node x="728.6342167832177" y="566.0">com.company.practice3.game.gameLogic.FightLogic</node>
-    <node x="1126.3775058275041" y="827.0">com.company.practice3.game.gameObjects.RandomParameters</node>
-    <node x="782.2501545121536" y="827.0">com.company.practice3.game.gameObjects.expeditions.ExpeditionController</node>
-    <node x="181.0" y="184.0">com.company.practice3.game.gameObjects.equipment.spells.HealSpell</node>
-    <node x="1011.6251545121536" y="950.0">com.company.practice3.game.gameObjects.Factory</node>
-    <node x="786.2501545121536" y="744.0">com.company.practice3.game.gameObjects.creatures.CharacterController</node>
-    <node x="964.25" y="267.0">com.company.practice3.game.gameObjects.creatures.Creature</node>
-    <node x="10.5" y="827.0">com.company.practice3.game.gui.BaseAnimationController</node>
-    <node x="829.1342167832177" y="184.0">com.company.practice3.game.gameObjects.equipment.Equipment</node>
-    <node x="528.6445512820497" y="81.0">com.company.practice3.game.gameObjects.equipment.spells.Spell</node>
-    <node x="0.0" y="1109.0">com.company.practice3.game.gui.GameApp</node>
+    <node x="125.30271272443383" y="784.0">com.company.practice3.game.gui.AsciiArt</node>
+    <node x="818.0527127244338" y="701.0">com.company.practice3.game.logic.ExpeditionLogic</node>
+    <node x="473.4999999999999" y="887.0">com.company.practice3.game.objects.expeditions.AutoExpeditionController</node>
+    <node x="879.418594847775" y="1000.0">com.company.practice3.game.objects.Factory</node>
+    <node x="1191.418594847775" y="81.0">com.company.practice3.game.objects.equipment.Armor</node>
+    <node x="694.8124999999999" y="81.0">com.company.practice3.game.objects.equipment.spells</node>
+    <node x="721.793594847775" y="483.0">com.company.practice3.game.objects.expeditions.Field</node>
+    <node x="481.42771272443383" y="370.0">com.company.practice3.game.objects.creatures.Character</node>
+    <node x="1069.0" y="370.0">com.company.practice3.game.objects.creatures.Mob</node>
+    <node x="264.4999999999999" y="887.0">com.company.practice3.game.objects.expeditions.ExpeditionController</node>
+    <node x="1026.4277127244338" y="184.0">com.company.practice3.game.objects.equipment.Equipment</node>
+    <node x="110.29359484777501" y="1083.0">com.company.practice3.game.gui.GameController</node>
+    <node x="926.9999999999999" y="586.0">com.company.practice3.game.logic.FightLogic</node>
+    <node x="850.4999999999999" y="370.0">com.company.practice3.game.objects.expeditions.Coordinates</node>
+    <node x="418.3027127244338" y="784.0">com.company.practice3.game.objects.creatures.CharacterController</node>
+    <node x="844.3027127244338" y="267.0">com.company.practice3.game.objects.creatures.Creature</node>
+    <node x="754.8749999999999" y="0.0">com.company.practice3.game.objects.GameObject</node>
+    <node x="889.168594847775" y="887.0">com.company.practice3.game.objects.RandomParameters</node>
+    <node x="21.499999999999886" y="887.0">com.company.practice3.game.gui.BaseAnimationController</node>
+    <node x="0.0" y="1159.0">com.company.practice3.game.gui.GameApp</node>
+    <node x="1026.1777127244338" y="81.0">com.company.practice3.game.objects.equipment.Weapon</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Creature" target="com.company.practice3.game.gameObjects.GameObject" relationship="GENERALIZATION">
-      <point x="36.0" y="-15.5" />
-      <point x="1054.0092167832177" y="61.0" />
-      <point x="943.669931068932" y="61.0" />
-      <point x="943.669931068932" y="51.0" />
-      <point x="734.5485024975034" y="51.0" />
-      <point x="33.75" y="15.5" />
+    <edge source="com.company.practice3.game.objects.creatures.Character" target="com.company.practice3.game.objects.equipment.spells" relationship="DEPENDENCY">
+      <point x="-14.375" y="-15.5" />
+      <point x="524.5527127244338" y="339.0" />
+      <point x="551.4277127244338" y="339.0" />
+      <point x="551.4277127244338" y="153.0" />
+      <point x="727.8124999999999" y="153.0" />
+      <point x="-33.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gui.BaseAnimationController" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="TO_ONE">
-      <point x="-54.5" y="-15.5" />
-      <point x="65.0" y="452.0" />
-      <point x="530.0820512820497" y="452.0" />
-      <point x="530.0820512820497" y="422.0" />
-      <point x="547.8945512820497" y="422.0" />
-      <point x="-28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.equipment.Equipment" relationship="CREATE">
-      <point x="27.272727272727252" y="-15.5" />
-      <point x="1088.8978817848808" y="909.0" />
-      <point x="1318.8775058275041" y="909.0" />
-      <point x="1318.8775058275041" y="246.0" />
-      <point x="770.5" y="246.0" />
-      <point x="770.5" y="236.0" />
-      <point x="860.1342167832177" y="236.0" />
-      <point x="-31.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController" target="com.company.practice3.game.gameLogic.FightLogic" relationship="DEPENDENCY">
-      <point x="82.875" y="-15.5" />
-      <point x="566.875" y="806.0" />
-      <point x="552.0820512820497" y="806.0" />
-      <point x="552.0820512820497" y="639.0" />
-      <point x="654.0166057276072" y="639.0" />
-      <point x="654.0166057276072" y="619.0" />
-      <point x="758.8842167832177" y="619.0" />
-      <point x="-30.25" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Weapon" target="com.company.practice3.game.gameObjects.GameObject" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.5" />
-      <point x="1118.5092167832177" y="61.0" />
-      <point x="943.669931068932" y="61.0" />
-      <point x="943.669931068932" y="51.0" />
-      <point x="734.5485024975034" y="51.0" />
-      <point x="33.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.Field" target="com.company.practice3.game.gameObjects.creatures.Creature" relationship="TO_MANY">
-      <point x="7.0" y="-15.5" />
-      <point x="1060.5820512820496" y="412.0" />
-      <point x="1044.3751545121536" y="412.0" />
-      <point x="1044.3751545121536" y="319.0" />
-      <point x="1018.25" y="319.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Character" target="com.company.practice3.game.gameObjects.equipment.Equipment" relationship="DEPENDENCY">
-      <point x="14.375" y="-15.5" />
-      <point x="591.0195512820497" y="329.0" />
-      <point x="604.6445512820497" y="329.0" />
-      <point x="604.6445512820497" y="246.0" />
-      <point x="770.5" y="246.0" />
-      <point x="770.5" y="236.0" />
-      <point x="860.1342167832177" y="236.0" />
-      <point x="-31.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.equipment.spells.HealSpell" relationship="CREATE">
-      <point x="-45.454545454545496" y="-15.5" />
-      <point x="1016.1706090576081" y="929.0" />
-      <point x="239.0" y="929.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Character" target="com.company.practice3.game.gameObjects.creatures.Creature" relationship="GENERALIZATION">
-      <point x="43.125" y="-15.5" />
-      <point x="619.7695512820497" y="329.0" />
-      <point x="767.3751545121536" y="329.0" />
-      <point x="767.3751545121536" y="319.0" />
-      <point x="982.25" y="319.0" />
-      <point x="-36.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.equipment.Weapon" relationship="DEPENDENCY">
-      <point x="53.14285714285717" y="-15.5" />
-      <point x="944.2770739260749" y="153.0" />
-      <point x="1145.5092167832177" y="153.0" />
-      <point x="27.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.equipment.Armor" relationship="CREATE">
-      <point x="36.363636363636374" y="-15.5" />
-      <point x="1097.98879087579" y="919.0" />
-      <point x="1327.9684149184134" y="919.0" />
-      <point x="1327.9684149184134" y="163.0" />
-      <point x="1100.0092167832177" y="163.0" />
-      <point x="1100.0092167832177" y="133.0" />
-      <point x="938.419931068932" y="133.0" />
-      <point x="23.5" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.RandomParameters" relationship="DEPENDENCY">
-      <point x="18.181818181818187" y="-15.5" />
-      <point x="1079.8069726939718" y="899.0" />
-      <point x="1217.3775058275041" y="899.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.ExpeditionLogic" target="com.company.practice3.game.gameObjects.creatures.Mob" relationship="DEPENDENCY">
-      <point x="22.714285714285666" y="-15.5" />
-      <point x="895.5392857142856" y="639.0" />
-      <point x="898.3842167832177" y="639.0" />
-      <point x="898.3842167832177" y="422.0" />
-      <point x="894.0093712953712" y="422.0" />
-      <point x="894.0093712953712" y="412.0" />
-      <point x="793.3751545121536" y="412.0" />
-      <point x="20.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.ExpeditionController" target="com.company.practice3.game.gameObjects.expeditions.Field" relationship="TO_ONE">
-      <point x="63.0" y="-15.5" />
-      <point x="939.7501545121536" y="806.0" />
-      <point x="1077.3320512820496" y="806.0" />
-      <point x="1077.3320512820496" y="525.0" />
-      <point x="1074.5820512820496" y="525.0" />
-      <point x="21.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.CharacterController" target="com.company.practice3.game.gameObjects.expeditions.Field" relationship="TO_ONE">
-      <point x="72.39999999999998" y="-15.5" />
-      <point x="949.1501545121534" y="723.0" />
-      <point x="1063.0320512820497" y="723.0" />
-      <point x="1063.0320512820497" y="535.0" />
-      <point x="1077.3320512820496" y="535.0" />
-      <point x="1077.3320512820496" y="525.0" />
-      <point x="1074.5820512820496" y="525.0" />
-      <point x="21.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.expeditions.ExpeditionController" relationship="CREATE">
-      <point x="-9.090909090909122" y="-15.5" />
-      <point x="1052.5342454212446" y="889.0" />
-      <point x="876.7501545121536" y="889.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.equipment.Armor" relationship="TO_ONE">
-      <point x="0.0" y="-15.5" />
-      <point x="-23.5" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.CharacterController" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="TO_ONE">
-      <point x="-72.39999999999998" y="-15.5" />
-      <point x="804.3501545121535" y="723.0" />
-      <point x="643.0166057276072" y="723.0" />
-      <point x="643.0166057276072" y="452.0" />
-      <point x="530.0820512820497" y="452.0" />
-      <point x="530.0820512820497" y="422.0" />
-      <point x="547.8945512820497" y="422.0" />
-      <point x="-28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.Field" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="DEPENDENCY">
-      <point x="-35.0" y="-15.5" />
-      <point x="1018.5820512820497" y="442.0" />
-      <point x="668.8751545121536" y="442.0" />
-      <point x="668.8751545121536" y="422.0" />
-      <point x="605.3945512820497" y="422.0" />
-      <point x="28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gui.GameController" target="com.company.practice3.game.gameObjects.Factory" relationship="DEPENDENCY">
-      <point x="52.33333333333326" y="-15.5" />
-      <point x="236.08348784548684" y="1012.0" />
-      <point x="1061.6251545121536" y="1012.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.creatures.Mob" relationship="CREATE">
-      <point x="9.090909090909065" y="-15.5" />
-      <point x="1070.7160636030626" y="889.0" />
-      <point x="1115.8775058275041" y="889.0" />
-      <point x="1115.8775058275041" y="422.0" />
-      <point x="894.0093712953712" y="422.0" />
-      <point x="894.0093712953712" y="412.0" />
-      <point x="793.3751545121536" y="412.0" />
-      <point x="20.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Character" target="com.company.practice3.game.gameObjects.GameObject" relationship="DEPENDENCY">
+    <edge source="com.company.practice3.game.objects.creatures.Character" target="com.company.practice3.game.objects.GameObject" relationship="DEPENDENCY">
       <point x="-43.125" y="-15.5" />
-      <point x="533.5195512820497" y="329.0" />
-      <point x="496.26955128204975" y="329.0" />
-      <point x="496.26955128204975" y="51.0" />
-      <point x="667.0485024975034" y="51.0" />
+      <point x="495.80271272443383" y="349.0" />
+      <point x="448.92771272443383" y="349.0" />
+      <point x="448.92771272443383" y="51.0" />
+      <point x="788.6249999999999" y="51.0" />
       <point x="-33.75" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameLogic.ExpeditionLogic" target="com.company.practice3.game.gameObjects.creatures.Creature" relationship="DEPENDENCY">
-      <point x="45.428571428571445" y="-15.5" />
-      <point x="918.2535714285714" y="629.0" />
-      <point x="984.8751545121536" y="629.0" />
-      <point x="984.8751545121536" y="329.0" />
-      <point x="1113.25" y="329.0" />
-      <point x="1113.25" y="319.0" />
-      <point x="1054.25" y="319.0" />
-      <point x="36.0" y="15.5" />
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.equipment.Armor" relationship="DEPENDENCY">
+      <point x="53.14285714285711" y="-15.5" />
+      <point x="1141.570569867291" y="153.0" />
+      <point x="1243.418594847775" y="153.0" />
+      <point x="1243.418594847775" y="143.0" />
+      <point x="1261.918594847775" y="143.0" />
+      <point x="23.5" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.Field" target="com.company.practice3.game.gameObjects.creatures.Creature" relationship="CREATE">
-      <point x="21.0" y="-15.5" />
-      <point x="1074.5820512820496" y="402.0" />
-      <point x="1113.25" y="402.0" />
-      <point x="1113.25" y="319.0" />
-      <point x="1054.25" y="319.0" />
-      <point x="36.0" y="15.5" />
+    <edge source="com.company.practice3.game.objects.expeditions.AutoExpeditionController" target="com.company.practice3.game.objects.creatures.Mob" relationship="TO_ONE">
+      <point x="82.875" y="-15.5" />
+      <point x="666.8749999999999" y="866.0" />
+      <point x="1114.6158821233412" y="866.0" />
+      <point x="1114.6158821233412" y="462.0" />
+      <point x="1131.25" y="462.0" />
+      <point x="20.75" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController" relationship="CREATE">
-      <point x="-27.272727272727252" y="-15.5" />
-      <point x="1034.3524272394263" y="909.0" />
-      <point x="484.0" y="909.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.Field" target="com.company.practice3.game.gameObjects.GameObject" relationship="GENERALIZATION">
-      <point x="35.0" y="-15.5" />
-      <point x="1088.5820512820496" y="412.0" />
-      <point x="1183.0092167832177" y="412.0" />
-      <point x="1183.0092167832177" y="61.0" />
-      <point x="943.669931068932" y="61.0" />
-      <point x="943.669931068932" y="51.0" />
-      <point x="734.5485024975034" y="51.0" />
-      <point x="33.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Creature" target="com.company.practice3.game.gameObjects.equipment.Equipment" relationship="TO_ONE">
-      <point x="0.0" y="-15.5" />
-      <point x="1018.25" y="236.0" />
-      <point x="922.1342167832177" y="236.0" />
-      <point x="31.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.equipment.spells.Spell" relationship="TO_MANY">
-      <point x="-35.42857142857139" y="-15.5" />
-      <point x="855.7056453546463" y="153.0" />
-      <point x="599.4778846153831" y="153.0" />
-      <point x="28.333333333333314" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.ExpeditionLogic" target="com.company.practice3.game.gameObjects.expeditions.Field" relationship="DEPENDENCY">
-      <point x="68.14285714285711" y="-15.5" />
-      <point x="940.967857142857" y="639.0" />
-      <point x="1024.7714285714285" y="639.0" />
-      <point x="1024.7714285714285" y="545.0" />
-      <point x="1046.6999999999998" y="545.0" />
-      <point x="1046.6999999999998" y="535.0" />
-      <point x="1032.5820512820496" y="535.0" />
-      <point x="-21.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.spells.HealSpell" target="com.company.practice3.game.gameObjects.equipment.spells.Spell" relationship="REALIZATION">
-      <point x="29.0" y="-15.5" />
-      <point x="268.0" y="153.0" />
-      <point x="542.8112179487164" y="153.0" />
-      <point x="-28.333333333333314" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="CREATE">
-      <point x="-18.181818181818187" y="-15.5" />
-      <point x="1043.4433363303353" y="899.0" />
-      <point x="605.0" y="899.0" />
-      <point x="605.0" y="442.0" />
-      <point x="668.8751545121536" y="442.0" />
-      <point x="668.8751545121536" y="422.0" />
-      <point x="605.3945512820497" y="422.0" />
-      <point x="28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.ExpeditionController" target="com.company.practice3.game.gameObjects.creatures.CharacterController" relationship="CREATE">
-      <point x="0.0" y="-15.5" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.ExpeditionLogic" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="DEPENDENCY">
-      <point x="-45.42857142857139" y="-15.5" />
-      <point x="827.3964285714285" y="629.0" />
-      <point x="675.0001545121536" y="629.0" />
-      <point x="675.0001545121536" y="442.0" />
-      <point x="668.8751545121536" y="442.0" />
-      <point x="668.8751545121536" y="422.0" />
-      <point x="605.3945512820497" y="422.0" />
-      <point x="28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Mob" target="com.company.practice3.game.gameObjects.creatures.Creature" relationship="GENERALIZATION">
-      <point x="-20.75" y="-15.5" />
-      <point x="751.8751545121536" y="329.0" />
-      <point x="767.3751545121536" y="329.0" />
-      <point x="767.3751545121536" y="319.0" />
-      <point x="982.25" y="319.0" />
+    <edge source="com.company.practice3.game.objects.creatures.Character" target="com.company.practice3.game.objects.creatures.Creature" relationship="GENERALIZATION">
+      <point x="43.125" y="-15.5" />
+      <point x="582.0527127244338" y="339.0" />
+      <point x="589.4902127244338" y="339.0" />
+      <point x="589.4902127244338" y="319.0" />
+      <point x="862.3027127244338" y="319.0" />
       <point x="-36.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.GameObject" relationship="GENERALIZATION">
-      <point x="-17.714285714285722" y="-15.5" />
-      <point x="873.419931068932" y="143.0" />
-      <point x="857.419931068932" y="143.0" />
-      <point x="857.419931068932" y="61.0" />
-      <point x="943.669931068932" y="61.0" />
-      <point x="943.669931068932" y="51.0" />
-      <point x="734.5485024975034" y="51.0" />
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.creatures.Mob" relationship="CREATE">
+      <point x="15.0" y="-15.5" />
+      <point x="944.418594847775" y="949.0" />
+      <point x="1103.6158821233412" y="949.0" />
+      <point x="1103.6158821233412" y="442.0" />
+      <point x="1089.75" y="442.0" />
+      <point x="-20.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.FightLogic" target="com.company.practice3.game.objects.expeditions.Field" relationship="DEPENDENCY">
+      <point x="-48.399999999999864" y="-15.5" />
+      <point x="939.1" y="565.0" />
+      <point x="650.4908821233411" y="565.0" />
+      <point x="650.4908821233411" y="535.0" />
+      <point x="784.793594847775" y="535.0" />
+      <point x="21.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.Creature" target="com.company.practice3.game.objects.GameObject" relationship="GENERALIZATION">
+      <point x="-36.0" y="-15.5" />
+      <point x="862.3027127244338" y="236.0" />
+      <point x="887.8027127244338" y="236.0" />
+      <point x="887.8027127244338" y="61.0" />
+      <point x="1018.7499999999999" y="61.0" />
+      <point x="1018.7499999999999" y="51.0" />
+      <point x="856.1249999999999" y="51.0" />
       <point x="33.75" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.equipment.Weapon" relationship="CREATE">
-      <point x="45.45454545454544" y="-15.5" />
-      <point x="1107.079699966699" y="929.0" />
-      <point x="1337.0593240093224" y="929.0" />
-      <point x="1337.0593240093224" y="153.0" />
-      <point x="1145.5092167832177" y="153.0" />
+    <edge source="com.company.practice3.game.gui.BaseAnimationController" target="com.company.practice3.game.objects.creatures.Character" relationship="TO_ONE">
+      <point x="-54.5" y="-15.5" />
+      <point x="75.99999999999989" y="866.0" />
+      <point x="114.80271272443383" y="866.0" />
+      <point x="114.80271272443383" y="462.0" />
+      <point x="176.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="432.0" />
+      <point x="510.17771272443383" y="432.0" />
+      <point x="-28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.FightLogic" target="com.company.practice3.game.objects.equipment.Equipment" relationship="DEPENDENCY">
+      <point x="48.400000000000205" y="-15.5" />
+      <point x="1035.9" y="565.0" />
+      <point x="1163.5" y="565.0" />
+      <point x="1163.5" y="246.0" />
+      <point x="1119.4277127244338" y="246.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.FightLogic" target="com.company.practice3.game.objects.expeditions.Coordinates" relationship="DEPENDENCY">
+      <point x="1.1368683772161603E-13" y="-15.5" />
+      <point x="987.5" y="462.0" />
+      <point x="916.4999999999999" y="462.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.ExpeditionLogic" target="com.company.practice3.game.objects.expeditions.Field" relationship="DEPENDENCY">
+      <point x="-45.428571428571445" y="-15.5" />
+      <point x="852.1241412958624" y="669.0" />
+      <point x="727.2857142857142" y="669.0" />
+      <point x="727.2857142857142" y="565.0" />
+      <point x="650.4908821233411" y="565.0" />
+      <point x="650.4908821233411" y="535.0" />
+      <point x="784.793594847775" y="535.0" />
+      <point x="21.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.ExpeditionLogic" target="com.company.practice3.game.objects.creatures.Character" relationship="DEPENDENCY">
+      <point x="-68.14285714285711" y="-15.5" />
+      <point x="829.4098555815767" y="679.0" />
+      <point x="324.80271272443383" y="679.0" />
+      <point x="324.80271272443383" y="462.0" />
+      <point x="399.00701600312243" y="462.0" />
+      <point x="399.00701600312243" y="422.0" />
+      <point x="567.6777127244338" y="422.0" />
+      <point x="28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.ExpeditionController" target="com.company.practice3.game.objects.expeditions.Field" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="358.9999999999999" y="866.0" />
+      <point x="339.9999999999999" y="866.0" />
+      <point x="339.9999999999999" y="565.0" />
+      <point x="520.1070160031225" y="565.0" />
+      <point x="520.1070160031225" y="545.0" />
+      <point x="742.793594847775" y="545.0" />
+      <point x="-21.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.Mob" target="com.company.practice3.game.objects.equipment.Equipment" relationship="DEPENDENCY">
+      <point x="20.75" y="-15.5" />
+      <point x="1131.25" y="349.0" />
+      <point x="1134.6320160031223" y="349.0" />
+      <point x="1134.6320160031223" y="246.0" />
+      <point x="1119.4277127244338" y="246.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.GameObject" relationship="GENERALIZATION">
+      <point x="-17.71428571428578" y="-15.5" />
+      <point x="1070.713427010148" y="143.0" />
+      <point x="1015.6777127244338" y="143.0" />
+      <point x="1015.6777127244338" y="61.0" />
+      <point x="1018.7499999999999" y="61.0" />
+      <point x="1018.7499999999999" y="51.0" />
+      <point x="856.1249999999999" y="51.0" />
+      <point x="33.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.FightLogic" target="com.company.practice3.game.objects.creatures.Mob" relationship="DEPENDENCY">
+      <point x="24.20000000000016" y="-15.5" />
+      <point x="1011.7" y="555.0" />
+      <point x="1103.6158821233412" y="555.0" />
+      <point x="1103.6158821233412" y="442.0" />
+      <point x="1089.75" y="442.0" />
+      <point x="-20.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.Field" target="com.company.practice3.game.objects.GameObject" relationship="GENERALIZATION">
+      <point x="-21.0" y="-15.5" />
+      <point x="742.793594847775" y="442.0" />
+      <point x="459.92771272443383" y="442.0" />
+      <point x="459.92771272443383" y="61.0" />
+      <point x="1018.7499999999999" y="61.0" />
+      <point x="1018.7499999999999" y="51.0" />
+      <point x="856.1249999999999" y="51.0" />
+      <point x="33.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.equipment.spells" relationship="DEPENDENCY">
+      <point x="-53.14285714285711" y="-15.5" />
+      <point x="1035.2848555815767" y="163.0" />
+      <point x="551.4277127244338" y="163.0" />
+      <point x="551.4277127244338" y="153.0" />
+      <point x="727.8124999999999" y="153.0" />
+      <point x="-33.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.Creature" target="com.company.practice3.game.objects.equipment.Equipment" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="898.3027127244338" y="236.0" />
+      <point x="1057.4277127244338" y="236.0" />
+      <point x="-31.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.Character" target="com.company.practice3.game.objects.equipment.Equipment" relationship="DEPENDENCY">
+      <point x="14.375" y="-15.5" />
+      <point x="553.3027127244338" y="349.0" />
+      <point x="562.4277127244338" y="349.0" />
+      <point x="562.4277127244338" y="246.0" />
+      <point x="1119.4277127244338" y="246.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.ExpeditionLogic" target="com.company.practice3.game.objects.creatures.Creature" relationship="DEPENDENCY">
+      <point x="45.428571428571445" y="-15.5" />
+      <point x="942.9812841530053" y="659.0" />
+      <point x="1058.5" y="659.0" />
+      <point x="1058.5" y="349.0" />
+      <point x="1031.0527127244338" y="349.0" />
+      <point x="1031.0527127244338" y="329.0" />
+      <point x="934.3027127244338" y="329.0" />
+      <point x="36.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.FightLogic" target="com.company.practice3.game.objects.creatures.Character" relationship="DEPENDENCY">
+      <point x="-24.199999999999932" y="-15.5" />
+      <point x="963.3" y="555.0" />
+      <point x="660.9908821233411" y="555.0" />
+      <point x="660.9908821233411" y="462.0" />
+      <point x="399.00701600312243" y="462.0" />
+      <point x="399.00701600312243" y="422.0" />
+      <point x="567.6777127244338" y="422.0" />
+      <point x="28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.Mob" target="com.company.practice3.game.objects.creatures.Creature" relationship="GENERALIZATION">
+      <point x="-20.75" y="-15.5" />
+      <point x="1089.75" y="339.0" />
+      <point x="589.4902127244338" y="339.0" />
+      <point x="589.4902127244338" y="319.0" />
+      <point x="862.3027127244338" y="319.0" />
+      <point x="-36.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.CharacterController" target="com.company.practice3.game.objects.creatures.Character" relationship="TO_ONE">
+      <point x="-72.40000000000003" y="-15.5" />
+      <point x="436.40271272443374" y="763.0" />
+      <point x="238.8027127244339" y="763.0" />
+      <point x="238.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="432.0" />
+      <point x="510.17771272443383" y="432.0" />
+      <point x="-28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.equipment.Equipment" relationship="CREATE">
+      <point x="25.0" y="-15.5" />
+      <point x="954.418594847775" y="959.0" />
+      <point x="1163.5" y="959.0" />
+      <point x="1163.5" y="246.0" />
+      <point x="1119.4277127244338" y="246.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.CharacterController" target="com.company.practice3.game.objects.expeditions.Field" relationship="DEPENDENCY">
+      <point x="36.19999999999999" y="-15.5" />
+      <point x="545.0027127244338" y="753.0" />
+      <point x="577.4027127244337" y="753.0" />
+      <point x="577.4027127244337" y="565.0" />
+      <point x="650.4908821233411" y="565.0" />
+      <point x="650.4908821233411" y="535.0" />
+      <point x="784.793594847775" y="535.0" />
+      <point x="21.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.spells" target="com.company.practice3.game.objects.GameObject" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="760.8124999999999" y="61.0" />
+      <point x="1018.7499999999999" y="61.0" />
+      <point x="1018.7499999999999" y="51.0" />
+      <point x="856.1249999999999" y="51.0" />
+      <point x="33.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.AutoExpeditionController" target="com.company.practice3.game.logic.FightLogic" relationship="DEPENDENCY">
+      <point x="27.625" y="-15.5" />
+      <point x="611.6249999999999" y="856.0" />
+      <point x="992.7499999999999" y="856.0" />
+      <point x="992.7499999999999" y="679.0" />
+      <point x="981.6158821233411" y="679.0" />
+      <point x="981.6158821233411" y="649.0" />
+      <point x="1017.7499999999999" y="649.0" />
+      <point x="30.25" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.FightLogic" target="com.company.practice3.game.logic.ExpeditionLogic" relationship="DEPENDENCY">
+      <point x="-30.25" y="15.5" />
+      <point x="957.2499999999999" y="649.0" />
+      <point x="897.5527127244338" y="649.0" />
+      <point x="0.0" y="-15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.ExpeditionLogic" target="com.company.practice3.game.logic.FightLogic" relationship="DEPENDENCY">
+      <point x="22.71428571428578" y="-15.5" />
+      <point x="920.2669984387196" y="679.0" />
+      <point x="981.6158821233411" y="679.0" />
+      <point x="981.6158821233411" y="649.0" />
+      <point x="1017.7499999999999" y="649.0" />
+      <point x="30.25" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.expeditions.ExpeditionController" relationship="CREATE">
+      <point x="-25.0" y="-15.5" />
+      <point x="904.418594847775" y="959.0" />
+      <point x="358.99999999999983" y="959.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.Field" target="com.company.practice3.game.objects.creatures.Creature" relationship="CREATE">
+      <point x="7.0" y="-15.5" />
+      <point x="770.793594847775" y="442.0" />
+      <point x="825.3027127244338" y="442.0" />
+      <point x="825.3027127244338" y="349.0" />
+      <point x="1031.0527127244338" y="349.0" />
+      <point x="1031.0527127244338" y="329.0" />
+      <point x="934.3027127244338" y="329.0" />
+      <point x="36.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.equipment.Weapon" relationship="DEPENDENCY">
+      <point x="17.71428571428578" y="-15.5" />
+      <point x="1106.1419984387196" y="163.0" />
+      <point x="1174.668594847775" y="163.0" />
+      <point x="1174.668594847775" y="133.0" />
+      <point x="1107.1777127244338" y="133.0" />
       <point x="27.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameLogic.FightLogic" target="com.company.practice3.game.gameObjects.expeditions.Coordinates" relationship="DEPENDENCY">
-      <point x="0.0" y="-15.5" />
-      <point x="789.1342167832177" y="545.0" />
-      <point x="782.5342167832177" y="545.0" />
-      <point x="782.5342167832177" y="432.0" />
-      <point x="860.1342167832177" y="432.0" />
-      <point x="860.1342167832177" y="402.0" />
-      <point x="900.1251545121536" y="402.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.equipment.Weapon" relationship="TO_ONE">
-      <point x="17.714285714285722" y="-15.5" />
-      <point x="908.8485024975034" y="143.0" />
-      <point x="1091.5092167832177" y="143.0" />
-      <point x="-27.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController" target="com.company.practice3.game.gui.AsciiArt" relationship="DEPENDENCY">
-      <point x="-82.875" y="-15.5" />
-      <point x="401.12499999999994" y="806.0" />
-      <point x="301.0" y="806.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.FightLogic" target="com.company.practice3.game.gameObjects.creatures.Mob" relationship="DEPENDENCY">
-      <point x="24.200000000000045" y="-15.5" />
-      <point x="813.3342167832177" y="535.0" />
-      <point x="793.5342167832177" y="535.0" />
-      <point x="793.5342167832177" y="422.0" />
-      <point x="894.0093712953712" y="422.0" />
-      <point x="894.0093712953712" y="412.0" />
-      <point x="793.3751545121536" y="412.0" />
-      <point x="20.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.ExpeditionController" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="TO_ONE">
-      <point x="-63.0" y="-15.5" />
-      <point x="813.7501545121536" y="806.0" />
-      <point x="628.7166057276072" y="806.0" />
-      <point x="628.7166057276072" y="452.0" />
-      <point x="530.0820512820497" y="452.0" />
-      <point x="530.0820512820497" y="422.0" />
-      <point x="547.8945512820497" y="422.0" />
-      <point x="-28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.Field" target="com.company.practice3.game.gameObjects.expeditions.Coordinates" relationship="DEPENDENCY">
-      <point x="-21.0" y="-15.5" />
-      <point x="1032.5820512820496" y="432.0" />
-      <point x="860.1342167832177" y="432.0" />
-      <point x="860.1342167832177" y="402.0" />
-      <point x="900.1251545121536" y="402.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.spells.HealSpell" target="com.company.practice3.game.gameObjects.GameObject" relationship="GENERALIZATION">
-      <point x="-29.0" y="-15.5" />
-      <point x="210.0" y="163.0" />
-      <point x="257.5" y="163.0" />
-      <point x="257.5" y="61.0" />
-      <point x="943.669931068932" y="61.0" />
-      <point x="943.669931068932" y="51.0" />
-      <point x="734.5485024975034" y="51.0" />
-      <point x="33.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Mob" target="com.company.practice3.game.gameObjects.equipment.Equipment" relationship="DEPENDENCY">
-      <point x="20.75" y="-15.5" />
-      <point x="793.3751545121536" y="329.0" />
-      <point x="777.8751545121536" y="329.0" />
-      <point x="777.8751545121536" y="246.0" />
-      <point x="770.5" y="246.0" />
-      <point x="770.5" y="236.0" />
-      <point x="860.1342167832177" y="236.0" />
-      <point x="-31.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.equipment.spells.Spell" relationship="DEPENDENCY">
-      <point x="-36.363636363636374" y="-15.5" />
-      <point x="1025.261518148517" y="919.0" />
-      <point x="362.9999999999999" y="919.0" />
-      <point x="362.99999999999994" y="163.0" />
-      <point x="571.1445512820497" y="163.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.FightLogic" target="com.company.practice3.game.gameObjects.equipment.Equipment" relationship="DEPENDENCY">
-      <point x="-24.200000000000045" y="-15.5" />
-      <point x="764.9342167832176" y="535.0" />
-      <point x="710.5001545121536" y="535.0" />
-      <point x="710.5001545121536" y="246.0" />
-      <point x="770.5" y="246.0" />
-      <point x="770.5" y="236.0" />
-      <point x="860.1342167832177" y="236.0" />
-      <point x="-31.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Character" target="com.company.practice3.game.gameObjects.equipment.spells.Spell" relationship="DEPENDENCY">
-      <point x="-14.375" y="-15.5" />
-      <point x="562.2695512820497" y="329.0" />
-      <point x="571.1445512820497" y="329.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="TO_ONE">
+    <edge source="com.company.practice3.game.objects.expeditions.AutoExpeditionController" target="com.company.practice3.game.objects.creatures.Character" relationship="TO_ONE">
       <point x="-27.625" y="-15.5" />
-      <point x="456.37499999999994" y="796.0" />
-      <point x="515.5001545121536" y="796.0" />
-      <point x="515.5001545121536" y="452.0" />
-      <point x="530.0820512820497" y="452.0" />
-      <point x="530.0820512820497" y="422.0" />
-      <point x="547.8945512820497" y="422.0" />
+      <point x="556.3749999999999" y="836.0" />
+      <point x="238.8027127244339" y="836.0" />
+      <point x="238.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="432.0" />
+      <point x="510.17771272443383" y="432.0" />
       <point x="-28.75" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.CharacterController" target="com.company.practice3.game.gameObjects.expeditions.Field" relationship="DEPENDENCY">
-      <point x="36.200000000000045" y="-15.5" />
-      <point x="912.9501545121536" y="713.0" />
-      <point x="1052.0320512820497" y="713.0" />
-      <point x="1052.0320512820497" y="545.0" />
-      <point x="1046.6999999999998" y="545.0" />
-      <point x="1046.6999999999998" y="535.0" />
-      <point x="1032.5820512820496" y="535.0" />
-      <point x="-21.0" y="15.5" />
+    <edge source="com.company.practice3.game.gui.GameController" target="com.company.practice3.game.objects.Factory" relationship="DEPENDENCY">
+      <point x="52.33333333333334" y="-15.5" />
+      <point x="241.12692818110838" y="1062.0" />
+      <point x="929.4185948477751" y="1062.0" />
+      <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.Field" target="com.company.practice3.game.gameObjects.creatures.Mob" relationship="DEPENDENCY">
+    <edge source="com.company.practice3.game.objects.expeditions.AutoExpeditionController" target="com.company.practice3.game.gui.AsciiArt" relationship="DEPENDENCY">
+      <point x="-82.875" y="-15.5" />
+      <point x="501.1249999999999" y="846.0" />
+      <point x="176.8027127244339" y="846.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.equipment.Armor" relationship="TO_ONE">
+      <point x="35.42857142857133" y="-15.5" />
+      <point x="1123.8562841530052" y="143.0" />
+      <point x="1214.918594847775" y="143.0" />
+      <point x="-23.5" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.gui.GameController" target="com.company.practice3.game.objects.creatures.Character" relationship="TO_ONE">
+      <point x="-52.33333333333337" y="-15.5" />
+      <point x="136.46026151444164" y="1062.0" />
+      <point x="10.999999999999886" y="1062.0" />
+      <point x="10.999999999999886" y="462.0" />
+      <point x="176.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="432.0" />
+      <point x="510.17771272443383" y="432.0" />
+      <point x="-28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.equipment.spells" relationship="CREATE">
+      <point x="-45.0" y="-15.5" />
+      <point x="884.418594847775" y="979.0" />
+      <point x="0.0" y="979.0" />
+      <point x="0.0" y="452.0" />
+      <point x="470.92771272443383" y="452.0" />
+      <point x="470.92771272443383" y="163.0" />
+      <point x="551.4277127244338" y="163.0" />
+      <point x="551.4277127244338" y="153.0" />
+      <point x="727.8124999999999" y="153.0" />
+      <point x="-33.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.equipment.spells" relationship="TO_MANY">
+      <point x="-35.42857142857133" y="-15.5" />
+      <point x="1052.9991412958625" y="153.0" />
+      <point x="793.8124999999999" y="153.0" />
+      <point x="33.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.ExpeditionLogic" target="com.company.practice3.game.objects.creatures.Mob" relationship="DEPENDENCY">
+      <point x="68.14285714285711" y="-15.5" />
+      <point x="965.6955698672909" y="669.0" />
+      <point x="1103.6158821233412" y="669.0" />
+      <point x="1103.6158821233412" y="442.0" />
+      <point x="1089.75" y="442.0" />
+      <point x="-20.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.expeditions.Field" relationship="CREATE">
+      <point x="-5.0" y="-15.5" />
+      <point x="924.418594847775" y="939.0" />
+      <point x="704.9999999999999" y="939.0" />
+      <point x="704.9999999999999" y="565.0" />
+      <point x="650.4908821233411" y="565.0" />
+      <point x="650.4908821233411" y="535.0" />
+      <point x="784.793594847775" y="535.0" />
+      <point x="21.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.Field" target="com.company.practice3.game.objects.expeditions.Coordinates" relationship="DEPENDENCY">
+      <point x="21.0" y="-15.5" />
+      <point x="784.793594847775" y="462.0" />
+      <point x="916.4999999999999" y="462.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.creatures.Character" relationship="CREATE">
+      <point x="-35.0" y="-15.5" />
+      <point x="894.418594847775" y="969.0" />
+      <point x="253.99999999999983" y="969.0" />
+      <point x="253.9999999999999" y="462.0" />
+      <point x="399.00701600312243" y="462.0" />
+      <point x="399.00701600312243" y="422.0" />
+      <point x="567.6777127244338" y="422.0" />
+      <point x="28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.ExpeditionController" target="com.company.practice3.game.objects.creatures.Character" relationship="TO_ONE">
+      <point x="-63.0" y="-15.5" />
+      <point x="295.9999999999999" y="856.0" />
+      <point x="114.80271272443383" y="856.0" />
+      <point x="114.80271272443383" y="462.0" />
+      <point x="176.8027127244339" y="462.0" />
+      <point x="176.8027127244339" y="432.0" />
+      <point x="510.17771272443383" y="432.0" />
+      <point x="-28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.Field" target="com.company.practice3.game.objects.creatures.Creature" relationship="TO_MANY">
       <point x="-7.0" y="-15.5" />
-      <point x="1046.5820512820496" y="422.0" />
-      <point x="894.0093712953712" y="422.0" />
-      <point x="894.0093712953712" y="412.0" />
-      <point x="793.3751545121536" y="412.0" />
-      <point x="20.75" y="15.5" />
+      <point x="756.793594847775" y="432.0" />
+      <point x="814.3027127244338" y="432.0" />
+      <point x="814.3027127244338" y="329.0" />
+      <point x="898.3027127244338" y="329.0" />
+      <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameLogic.FightLogic" target="com.company.practice3.game.gameObjects.expeditions.Field" relationship="DEPENDENCY">
-      <point x="48.39999999999998" y="-15.5" />
-      <point x="837.5342167832176" y="545.0" />
-      <point x="1046.6999999999998" y="545.0" />
-      <point x="1046.6999999999998" y="535.0" />
-      <point x="1032.5820512820496" y="535.0" />
-      <point x="-21.0" y="15.5" />
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.equipment.Armor" relationship="CREATE">
+      <point x="45.0" y="-15.5" />
+      <point x="974.418594847775" y="979.0" />
+      <point x="1243.418594847775" y="979.0" />
+      <point x="1243.418594847775" y="143.0" />
+      <point x="1261.918594847775" y="143.0" />
+      <point x="23.5" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.expeditions.Field" target="com.company.practice3.game.objects.creatures.Character" relationship="DEPENDENCY">
+      <point x="-35.0" y="-15.5" />
+      <point x="728.793594847775" y="462.0" />
+      <point x="399.00701600312243" y="462.0" />
+      <point x="399.00701600312243" y="422.0" />
+      <point x="567.6777127244338" y="422.0" />
+      <point x="28.75" y="15.5" />
     </edge>
     <edge source="com.company.practice3.game.gui.BaseAnimationController" target="com.company.practice3.game.gui.AsciiArt" relationship="DEPENDENCY">
       <point x="54.5" y="-15.5" />
-      <point x="174.0" y="806.0" />
-      <point x="301.0" y="806.0" />
+      <point x="184.9999999999999" y="846.0" />
+      <point x="176.8027127244339" y="846.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.Creature" target="com.company.practice3.game.gameObjects.equipment.Equipment" relationship="DEPENDENCY">
-      <point x="-36.0" y="-15.5" />
-      <point x="982.25" y="246.0" />
-      <point x="770.5" y="246.0" />
-      <point x="770.5" y="236.0" />
-      <point x="860.1342167832177" y="236.0" />
-      <point x="-31.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.CharacterController" target="com.company.practice3.game.gameLogic.ExpeditionLogic" relationship="DEPENDENCY">
-      <point x="0.0" y="-15.5" />
-      <point x="876.7501545121536" y="723.0" />
-      <point x="872.8249999999999" y="723.0" />
+    <edge source="com.company.practice3.game.objects.creatures.CharacterController" target="com.company.practice3.game.logic.ExpeditionLogic" relationship="DEPENDENCY">
+      <point x="72.39999999999992" y="-15.5" />
+      <point x="581.2027127244337" y="763.0" />
+      <point x="897.5527127244338" y="763.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.Factory" target="com.company.practice3.game.gameObjects.expeditions.Field" relationship="CREATE">
-      <point x="0.0" y="-15.5" />
-      <point x="1061.6251545121536" y="879.0" />
-      <point x="1098.3843712953712" y="879.0" />
-      <point x="1098.3843712953712" y="545.0" />
-      <point x="1046.6999999999998" y="545.0" />
-      <point x="1046.6999999999998" y="535.0" />
-      <point x="1032.5820512820496" y="535.0" />
-      <point x="-21.0" y="15.5" />
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.equipment.Weapon" relationship="CREATE">
+      <point x="35.0" y="-15.5" />
+      <point x="964.418594847775" y="969.0" />
+      <point x="1176.0070160031223" y="969.0" />
+      <point x="1176.0070160031223" y="163.0" />
+      <point x="1174.668594847775" y="163.0" />
+      <point x="1174.668594847775" y="133.0" />
+      <point x="1107.1777127244338" y="133.0" />
+      <point x="27.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gui.GameController" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="TO_ONE">
-      <point x="-52.33333333333326" y="-15.5" />
-      <point x="131.41682117882033" y="1012.0" />
-      <point x="0.0" y="1012.0" />
-      <point x="0.0" y="452.0" />
-      <point x="530.0820512820497" y="452.0" />
-      <point x="530.0820512820497" y="422.0" />
-      <point x="547.8945512820497" y="422.0" />
-      <point x="-28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.ExpeditionLogic" target="com.company.practice3.game.gameLogic.FightLogic" relationship="DEPENDENCY">
-      <point x="-68.14285714285711" y="-15.5" />
-      <point x="804.6821428571428" y="639.0" />
-      <point x="654.0166057276072" y="639.0" />
-      <point x="654.0166057276072" y="619.0" />
-      <point x="758.8842167832177" y="619.0" />
-      <point x="-30.25" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.FightLogic" target="com.company.practice3.game.gameLogic.ExpeditionLogic" relationship="DEPENDENCY">
-      <point x="30.25" y="15.5" />
-      <point x="819.3842167832177" y="619.0" />
-      <point x="850.1107142857143" y="619.0" />
-      <point x="-22.714285714285666" y="-15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.creatures.CharacterController" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="DEPENDENCY">
-      <point x="-36.200000000000045" y="-15.5" />
-      <point x="840.5501545121535" y="713.0" />
-      <point x="665.0166057276072" y="713.0" />
-      <point x="665.0166057276072" y="442.0" />
-      <point x="668.8751545121536" y="442.0" />
-      <point x="668.8751545121536" y="422.0" />
-      <point x="605.3945512820497" y="422.0" />
-      <point x="28.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameLogic.ExpeditionLogic" target="com.company.practice3.game.gameObjects.expeditions.Coordinates" relationship="CREATE">
-      <point x="0.0" y="-15.5" />
-      <point x="872.8249999999999" y="639.0" />
-      <point x="860.1342167832177" y="639.0" />
-      <point x="860.1342167832177" y="402.0" />
-      <point x="900.1251545121536" y="402.0" />
+    <edge source="com.company.practice3.game.objects.expeditions.ExpeditionController" target="com.company.practice3.game.objects.creatures.CharacterController" relationship="CREATE">
+      <point x="63.0" y="-15.5" />
+      <point x="421.9999999999999" y="866.0" />
+      <point x="508.8027127244338" y="866.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameLogic.FightLogic" target="com.company.practice3.game.gameObjects.creatures.Character" relationship="DEPENDENCY">
-      <point x="-48.39999999999998" y="-15.5" />
-      <point x="740.7342167832177" y="545.0" />
-      <point x="685.3751545121536" y="545.0" />
-      <point x="685.3751545121536" y="442.0" />
-      <point x="668.8751545121536" y="442.0" />
-      <point x="668.8751545121536" y="422.0" />
-      <point x="605.3945512820497" y="422.0" />
-      <point x="28.75" y="15.5" />
+    <edge source="com.company.practice3.game.objects.equipment.Equipment" target="com.company.practice3.game.objects.equipment.Weapon" relationship="TO_ONE">
+      <point x="0.0" y="-15.5" />
+      <point x="1088.4277127244338" y="133.0" />
+      <point x="1053.1777127244338" y="133.0" />
+      <point x="-27.0" y="15.5" />
     </edge>
     <edge source="com.company.practice3.game.gui.GameController" target="com.company.practice3.game.gui.BaseAnimationController" relationship="CREATE">
       <point x="0.0" y="-15.5" />
-      <point x="183.75015451215359" y="1002.0" />
-      <point x="119.5" y="1002.0" />
+      <point x="188.793594847775" y="1052.0" />
+      <point x="130.4999999999999" y="1052.0" />
       <point x="0.0" y="15.5" />
     </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.equipment.Armor" relationship="DEPENDENCY">
-      <point x="35.428571428571445" y="-15.5" />
-      <point x="926.5627882117891" y="163.0" />
-      <point x="1100.0092167832177" y="163.0" />
-      <point x="1100.0092167832177" y="133.0" />
-      <point x="938.419931068932" y="133.0" />
-      <point x="23.5" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Armor" target="com.company.practice3.game.gameObjects.GameObject" relationship="GENERALIZATION">
-      <point x="0.0" y="-15.5" />
-      <point x="914.919931068932" y="61.0" />
-      <point x="943.669931068932" y="61.0" />
-      <point x="943.669931068932" y="51.0" />
-      <point x="734.5485024975034" y="51.0" />
-      <point x="33.75" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.equipment.Equipment" target="com.company.practice3.game.gameObjects.equipment.spells.Spell" relationship="DEPENDENCY">
-      <point x="-53.14285714285711" y="-15.5" />
-      <point x="837.9913596403605" y="163.0" />
-      <point x="571.1445512820497" y="163.0" />
-      <point x="0.0" y="15.5" />
-    </edge>
-    <edge source="com.company.practice3.game.gameObjects.expeditions.AutoExpeditionController" target="com.company.practice3.game.gameObjects.creatures.Mob" relationship="TO_ONE">
-      <point x="27.625" y="-15.5" />
-      <point x="511.62499999999994" y="806.0" />
-      <point x="526.5001545121536" y="806.0" />
-      <point x="526.5001545121536" y="432.0" />
-      <point x="751.8751545121536" y="432.0" />
+    <edge source="com.company.practice3.game.objects.expeditions.Field" target="com.company.practice3.game.objects.creatures.Mob" relationship="DEPENDENCY">
+      <point x="35.0" y="-15.5" />
+      <point x="798.793594847775" y="452.0" />
+      <point x="1103.6158821233412" y="452.0" />
+      <point x="1103.6158821233412" y="442.0" />
+      <point x="1089.75" y="442.0" />
       <point x="-20.75" y="15.5" />
     </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Weapon" target="com.company.practice3.game.objects.GameObject" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="1080.1777127244338" y="61.0" />
+      <point x="1018.7499999999999" y="61.0" />
+      <point x="1018.7499999999999" y="51.0" />
+      <point x="856.1249999999999" y="51.0" />
+      <point x="33.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.logic.ExpeditionLogic" target="com.company.practice3.game.objects.expeditions.Coordinates" relationship="CREATE">
+      <point x="-22.714285714285666" y="-15.5" />
+      <point x="874.8384270101482" y="639.0" />
+      <point x="900.7570160031224" y="639.0" />
+      <point x="900.7570160031224" y="462.0" />
+      <point x="916.4999999999999" y="462.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.CharacterController" target="com.company.practice3.game.objects.expeditions.Field" relationship="TO_ONE">
+      <point x="-5.6843418860808015E-14" y="-15.5" />
+      <point x="508.8027127244337" y="763.0" />
+      <point x="521.4027127244337" y="763.0" />
+      <point x="521.4027127244337" y="565.0" />
+      <point x="520.1070160031225" y="565.0" />
+      <point x="520.1070160031225" y="545.0" />
+      <point x="742.793594847775" y="545.0" />
+      <point x="-21.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.Creature" target="com.company.practice3.game.objects.equipment.Equipment" relationship="DEPENDENCY">
+      <point x="36.0" y="-15.5" />
+      <point x="934.3027127244338" y="246.0" />
+      <point x="1119.4277127244338" y="246.0" />
+      <point x="31.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.expeditions.AutoExpeditionController" relationship="CREATE">
+      <point x="-15.0" y="-15.5" />
+      <point x="914.418594847775" y="949.0" />
+      <point x="583.9999999999999" y="949.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.Factory" target="com.company.practice3.game.objects.RandomParameters" relationship="DEPENDENCY">
+      <point x="5.0" y="-15.5" />
+      <point x="934.418594847775" y="939.0" />
+      <point x="980.168594847775" y="939.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.creatures.CharacterController" target="com.company.practice3.game.objects.creatures.Character" relationship="DEPENDENCY">
+      <point x="-36.200000000000045" y="-15.5" />
+      <point x="472.60271272443373" y="753.0" />
+      <point x="324.80271272443383" y="753.0" />
+      <point x="324.80271272443383" y="462.0" />
+      <point x="399.00701600312243" y="462.0" />
+      <point x="399.00701600312243" y="422.0" />
+      <point x="567.6777127244338" y="422.0" />
+      <point x="28.75" y="15.5" />
+    </edge>
+    <edge source="com.company.practice3.game.objects.equipment.Armor" target="com.company.practice3.game.objects.GameObject" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="1238.418594847775" y="61.0" />
+      <point x="1018.7499999999999" y="61.0" />
+      <point x="1018.7499999999999" y="51.0" />
+      <point x="856.1249999999999" y="51.0" />
+      <point x="33.75" y="15.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.4" showDependencies="true" x="569.4999999999995" y="527.4999999999998" />
+  <settings layout="Hierarchic" zoom="0.4" showDependencies="true" x="580.205882352941" y="620.0" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
