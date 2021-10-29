@@ -42,11 +42,11 @@ public class AutoExpeditionController implements Runnable{
             FightLogic.autoFight(character, mob);
             if (!character.isAlive()) break;
             character.castHealSpell();
-            try {
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        }
+        try {
+            TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
         Platform.runLater(() -> expeditionBtn.setDisable(false));

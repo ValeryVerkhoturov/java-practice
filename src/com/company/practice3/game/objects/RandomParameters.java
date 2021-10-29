@@ -65,7 +65,7 @@ class RandomParameters {
     }
 
     public int healStrength(){
-        return random.nextInt(5) + 1;
+        return random.nextInt(10) + 10;
     }
 
     public int spellAmmount(){
