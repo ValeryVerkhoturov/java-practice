@@ -37,7 +37,7 @@ class RandomParameters {
     }
 
     public int hp(){
-        return random.nextInt(25) + 25;
+        return random.nextInt(50) + 50;
     }
 
     public int atk(){

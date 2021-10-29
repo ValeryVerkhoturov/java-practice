@@ -1,5 +1,6 @@
 package com.company.practice3.game.objects.expeditions;
 
+import com.company.practice3.game.gui.GameController;
 import com.company.practice3.game.objects.creatures.CharacterController;
 import com.company.practice3.game.objects.creatures.Character;
 import javafx.application.Platform;
@@ -17,44 +18,34 @@ public class ExpeditionController implements Runnable{
 
     Field field;
 
-    Character character;
-
-    Label fieldLbl;
-
-    Label equipmentLbl;
-
-    Button expeditionBtn;
-
-    Button autoExpeditionBtn;
-
-    ReentrantLock lock;
+    GameController gameController;
 
     @Override
     public void run() {
-        if(!character.isAlive())
+        if(!gameController.getCharacter().isAlive())
             return;
-        lock.lock();
-        Platform.runLater(() -> expeditionBtn.setDisable(true));
-        Platform.runLater(() -> autoExpeditionBtn.setDisable(true));
-        Platform.runLater(() -> fieldLbl.setText(field.toString()));
-        Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+        gameController.getMutex().lock();
+        Platform.runLater(() -> gameController.getExpedition().setDisable(true));
+        Platform.runLater(() -> gameController.getAutoExpedition().setDisable(true));
+        Platform.runLater(() -> gameController.getBattleField().setText(field.toString()));
+        Platform.runLater(() -> gameController.getEquipment().setText(gameController.getCharacter().printStats()));
         try {
-            Thread characterThread = new Thread(new CharacterController(character, field));
+            Thread characterThread = new Thread(new CharacterController(gameController.getCharacter(), field));
             characterThread.setName("Персонаж");
             characterThread.setDaemon(true);
             characterThread.start();
             while (characterThread.isAlive()){
-                Platform.runLater(() -> fieldLbl.setText(field.toString()));
-                Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+                Platform.runLater(() -> gameController.getBattleField().setText(field.toString()));
+                Platform.runLater(() -> gameController.getEquipment().setText(gameController.getCharacter().printStats()));
                 TimeUnit.MILLISECONDS.sleep(50);
             }
-            Platform.runLater(() -> fieldLbl.setText(field.toString()));
-            Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
+            Platform.runLater(() -> gameController.getBattleField().setText(field.toString()));
+            Platform.runLater(() -> gameController.getEquipment().setText(gameController.getCharacter().printStats()));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Platform.runLater(() -> expeditionBtn.setDisable(false));
-        Platform.runLater(() -> autoExpeditionBtn.setDisable(false));
-        lock.unlock();
+        Platform.runLater(() -> gameController.getExpedition().setDisable(false));
+        Platform.runLater(() -> gameController.getAutoExpedition().setDisable(false));
+        gameController.getMutex().unlock();
     }
 }

@@ -1,39 +1,27 @@
 package com.company.practice3.game.gui;
 
-import com.company.practice3.game.objects.creatures.Character;
 import javafx.application.Platform;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import lombok.Value;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
 @Value
 public class BaseAnimationController implements Runnable {
 
-    Character character;
-
-    Label field;
-
-    Button expedition;
-
-    Button autoExpedition;
-
-    ReentrantLock lock;
+    GameController gameController;
 
     @Override
     public void run() {
         String[] asciiArt = AsciiArt.baseAnimation;
         while (true){
-            if (!character.isAlive() && !lock.isLocked()){
-                Platform.runLater(() -> expedition.setDisable(true));
-                Platform.runLater(() -> autoExpedition.setDisable(true));
+            if (!gameController.getCharacter().isAlive() && !gameController.getMutex().isLocked()){
+                Platform.runLater(() -> gameController.getExpedition().setDisable(true));
+                Platform.runLater(() -> gameController.getAutoExpedition().setDisable(true));
                 asciiArt = AsciiArt.deathAnimation;
             }
             for (String art: asciiArt) {
-                if (!lock.isLocked())
-                    Platform.runLater(() -> field.setText(art));
+                if (!gameController.getMutex().isLocked())
+                    Platform.runLater(() -> gameController.getBattleField().setText(art));
                 try {
                     TimeUnit.MILLISECONDS.sleep(300);
                 } catch (InterruptedException e) {

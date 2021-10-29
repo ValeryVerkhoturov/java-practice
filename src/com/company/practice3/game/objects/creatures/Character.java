@@ -42,7 +42,7 @@ public class Character extends Creature {
 
     @Override
     public void takeDamage(int atk) {
-        super.takeDamage(atk / 2 );
+        super.takeDamage(atk / 3 );
     }
 
     @Override

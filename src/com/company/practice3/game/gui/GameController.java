@@ -41,10 +41,7 @@ public class GameController {
 
     @FXML
     private void runExpedition() throws Exception {
-        Thread thread = new Thread(
-                Factory.newRandomExpeditionController(
-                        character, battleField, equipment,
-                        expedition, autoExpedition, mutex));
+        Thread thread = new Thread(Factory.newRandomExpeditionController(this));
         thread.setName("Экспедиция");
         thread.setDaemon(true);
         thread.start();
@@ -52,20 +49,14 @@ public class GameController {
 
     @FXML
     private void runAutoExpedition(){
-        Thread thread = new Thread(
-                Factory.newRandomAutoExpedtionController(
-                        character, battleField, equipment,
-                        expedition, autoExpedition, mutex));
+        Thread thread = new Thread(Factory.newRandomAutoExpedtionController(this));
         thread.setName("Автоэкспедиция");
         thread.setDaemon(true);
         thread.start();
     }
 
     private void runBaseCoffeAnimation(){
-        Thread thread = new Thread(
-                new BaseAnimationController(
-                        character, battleField,
-                        expedition, autoExpedition, mutex));
+        Thread thread = new Thread(new BaseAnimationController(this));
         thread.setName("Анимация кофе на базе");
         thread.setDaemon(true);
         thread.start();

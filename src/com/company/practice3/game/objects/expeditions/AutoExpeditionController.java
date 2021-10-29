@@ -1,5 +1,6 @@
 package com.company.practice3.game.objects.expeditions;
 
+import com.company.practice3.game.gui.GameController;
 import com.company.practice3.game.logic.FightLogic;
 import com.company.practice3.game.objects.Factory;
 import com.company.practice3.game.objects.creatures.Character;
@@ -17,40 +18,30 @@ import java.util.concurrent.locks.ReentrantLock;
 @Value
 public class AutoExpeditionController implements Runnable{
 
-    Character character;
-
-    Label fieldLbl;
-
-    Label equipmentLbl;
-
-    Button expeditionBtn;
-
-    Button autoExpeditionBtn;
-
-    ReentrantLock lock;
+    GameController gameController;
 
     @Override
     public void run() {
-        if (!character.isAlive())
+        if (!gameController.getCharacter().isAlive())
             return;
-        lock.lock();
-        Platform.runLater(() -> expeditionBtn.setDisable(true));
-        Platform.runLater(() -> autoExpeditionBtn.setDisable(true));
-        Platform.runLater(() -> fieldLbl.setText(AsciiArt.autoExpedition));
+        gameController.getMutex().lock();
+        Platform.runLater(() -> gameController.getExpedition().setDisable(true));
+        Platform.runLater(() -> gameController.getAutoExpedition().setDisable(true));
+        Platform.runLater(() -> gameController.getBattleField().setText(AsciiArt.autoExpedition));
         ArrayList<Mob> mobs = Factory.newRandomMobs();
         for(Mob mob: mobs) {
-            FightLogic.autoFight(character, mob);
-            if (!character.isAlive()) break;
-            character.castHealSpell();
+            FightLogic.autoFight(gameController.getCharacter(), mob);
+            if (!gameController.getCharacter().isAlive()) break;
+            gameController.getCharacter().castHealSpell();
         }
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Platform.runLater(() -> equipmentLbl.setText(character.printStats()));
-        Platform.runLater(() -> expeditionBtn.setDisable(false));
-        Platform.runLater(() -> autoExpeditionBtn.setDisable(false));
-        lock.unlock();
+        Platform.runLater(() -> gameController.getEquipment().setText(gameController.getCharacter().printStats()));
+        Platform.runLater(() -> gameController.getExpedition().setDisable(false));
+        Platform.runLater(() -> gameController.getAutoExpedition().setDisable(false));
+        gameController.getMutex().unlock();
     }
 }
