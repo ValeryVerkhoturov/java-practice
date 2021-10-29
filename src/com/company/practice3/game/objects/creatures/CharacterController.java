@@ -2,21 +2,14 @@ package com.company.practice3.game.objects.creatures;
 
 import com.company.practice3.game.logic.ExpeditionLogic;
 import com.company.practice3.game.objects.expeditions.Field;
-import lombok.AccessLevel;
-import lombok.experimental.FieldDefaults;
+import lombok.Value;
 
-
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@Value
 public class CharacterController implements Runnable{
-
-    Field field;
 
     Character character;
 
-    public CharacterController(Character character, Field field) {
-        this.character = character;
-        this.field = field;
-    }
+    Field field;
 
     @Override
     public void run() {
