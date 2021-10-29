@@ -67,6 +67,6 @@ public class Factory {
     }
 
     public AutoExpeditionController newRandomAutoExpedtionController(Character character, Label field, Label equipment, Button expeditionButton, Button autoExpedition, ReentrantLock lock){
-        return new AutoExpeditionController(character, field, equipment, expeditionButton, autoExpedition, lock, newRandomMob());
+        return new AutoExpeditionController(character, field, equipment, expeditionButton, autoExpedition, lock);
     }
 }

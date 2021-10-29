@@ -31,11 +31,16 @@ public class Character extends Creature {
     }
 
     public void castHealSpell(){
-        if (getEquipment().getSpells().size() > 0){
+        if (getEquipment().getSpells().size() > 0 && getHp() < 100){
             Spell spell = getEquipment().getSpells().stream().findFirst().get();
             setHp(getHp() + spell.cast());
             getEquipment().getSpells().remove(spell);
         }
+    }
+
+    @Override
+    public void takeDamage(int atk) {
+        super.takeDamage(atk / 2 );
     }
 
     @Override

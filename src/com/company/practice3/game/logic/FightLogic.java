@@ -33,6 +33,19 @@ public class FightLogic {
 
     }
 
+    public void autoFight(Character character, Mob mob) {
+        while (character.isAlive() && mob.isAlive()){
+            if(ThreadLocalRandom.current().nextBoolean()) {
+                mob.takeDamage(character.getAtk() + character.getEquipment().getWeapon().getDamage());
+            }
+            else {
+                character.takeDamage(mob.getAtk() + mob.getEquipment().getWeapon().getDamage());
+            }
+        }
+        if (character.isAlive())
+            lootMob(character, mob);
+    }
+
     public void lootMob(Character character, Mob mob){
         Equipment charcterEquipment = character.getEquipment();
         Equipment mobEquipment = mob.getEquipment();

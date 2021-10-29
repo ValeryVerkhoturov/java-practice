@@ -8,11 +8,11 @@ import lombok.NonNull;
 @NoArgsConstructor
 public abstract class GameObject {
 
+    @NonNull private String name;
+
     public GameObject(@NonNull String name) {
         this.name = name;
     }
-
-    @NonNull private String name;
 
     public char viewOnMap(){
         return 'U'; // Undefined

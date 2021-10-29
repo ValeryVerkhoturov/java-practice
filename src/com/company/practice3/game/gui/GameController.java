@@ -5,26 +5,31 @@ import com.company.practice3.game.objects.creatures.Character;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.experimental.FieldDefaults;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+@Getter
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class GameController {
 
-    private ReentrantLock mutex;
+    ReentrantLock mutex;
 
-    private Character character;
-
-    @FXML
-    private Label battleField;
+    Character character;
 
     @FXML
-    private Label equipment;
+    Label battleField;
 
     @FXML
-    private Button expedition;
+    Label equipment;
 
     @FXML
-    private Button autoExpedition;
+    Button expedition;
+
+    @FXML
+    Button autoExpedition;
 
     @FXML
     private void initialize(){

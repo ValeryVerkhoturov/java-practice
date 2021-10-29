@@ -7,26 +7,27 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import lombok.Data;
 import lombok.NonNull;
+import lombok.Value;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-@Data
+@Value
 public class ExpeditionController implements Runnable{
 
-    @NonNull private final Field field;
+    Field field;
 
-    @NonNull private final Character character;
+    Character character;
 
-    @NonNull private final Label fieldLbl;
+    Label fieldLbl;
 
-    @NonNull private final Label equipmentLbl;
+    Label equipmentLbl;
 
-    @NonNull private final Button expeditionBtn;
+    Button expeditionBtn;
 
-    @NonNull private final Button autoExpeditionBtn;
+    Button autoExpeditionBtn;
 
-    @NonNull private final ReentrantLock lock;
+    ReentrantLock lock;
 
     @Override
     public void run() {

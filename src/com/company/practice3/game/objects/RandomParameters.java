@@ -33,7 +33,7 @@ class RandomParameters {
     }
 
     public int damage(){
-        return random.nextInt(15) + 15;
+        return random.nextInt(10) + 5;
     }
 
     public int hp(){
@@ -41,7 +41,7 @@ class RandomParameters {
     }
 
     public int atk(){
-        return random.nextInt(5) + 20;
+        return random.nextInt(5) + 30;
     }
 
     public double aps(){
@@ -49,7 +49,7 @@ class RandomParameters {
     }
 
     public int def(){
-        return random.nextInt(5);
+        return random.nextInt(10) + 1;
     }
 
     public int rows(){
@@ -61,7 +61,7 @@ class RandomParameters {
     }
 
     public int mobsAmmount(){
-        return random.nextInt(5) + 5;
+        return random.nextInt(2) + 3;
     }
 
     public int healStrength(){

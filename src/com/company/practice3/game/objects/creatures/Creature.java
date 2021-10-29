@@ -3,20 +3,22 @@ package com.company.practice3.game.objects.creatures;
 import com.company.practice3.game.objects.GameObject;
 import com.company.practice3.game.objects.equipment.Equipment;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 import org.jetbrains.annotations.NotNull;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public abstract class Creature extends GameObject {
 
-    private int hp;
+    int hp;
 
-    @NonNull private Equipment equipment;
+    Equipment equipment;
 
-    private int atk;
+    int atk;
 
-    private double aps;
+    double aps;
 
     public Creature(String name, int hp, @NotNull Equipment equipment, int atk, double aps) {
         super(name);
@@ -34,7 +36,7 @@ public abstract class Creature extends GameObject {
             setHp(0);
             return;
         }
-        setHp(getHp() - 1);
+        setHp(getHp() - atk);
     }
 
     public boolean isAlive(){

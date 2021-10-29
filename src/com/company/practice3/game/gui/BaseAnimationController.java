@@ -4,24 +4,23 @@ import com.company.practice3.game.objects.creatures.Character;
 import javafx.application.Platform;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import lombok.Data;
-import lombok.NonNull;
+import lombok.Value;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-@Data
+@Value
 public class BaseAnimationController implements Runnable {
 
-    @NonNull private final Character character;
+    Character character;
 
-    @NonNull private final Label field;
+    Label field;
 
-    @NonNull private final Button expedition;
+    Button expedition;
 
-    @NonNull private final Button autoExpedition;
+    Button autoExpedition;
 
-    @NonNull private final ReentrantLock lock;
+    ReentrantLock lock;
 
     @Override
     public void run() {

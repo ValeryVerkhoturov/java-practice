@@ -1,10 +1,12 @@
 package com.company.practice3.game.objects.equipment.spells;
 
 import com.company.practice3.game.objects.GameObject;
+import lombok.Value;
 
+@Value
 public class HealSpell extends GameObject implements Spell {
 
-    private final int healStrength;
+    int healStrength;
 
     public HealSpell(int healStrength){
         super("Лечащее заклинание");
