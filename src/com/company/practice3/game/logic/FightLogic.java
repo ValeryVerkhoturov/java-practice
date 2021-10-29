@@ -53,7 +53,7 @@ public class FightLogic {
             charcterEquipment.setWeapon(mobEquipment.getWeapon());
         if (mobEquipment.getArmor().getDef() > charcterEquipment.getArmor().getDef())
             charcterEquipment.setArmor(mobEquipment.getArmor());
-        if (mobEquipment.getSpells().size() > 0 && charcterEquipment.getSpells().size() < 3)
+        while (mobEquipment.getSpells().size() > 0 && charcterEquipment.getSpells().size() < 3)
             charcterEquipment.addSpells(mobEquipment.getSpells());
     }
 }

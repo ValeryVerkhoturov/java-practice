@@ -4,7 +4,6 @@ import com.company.practice3.game.objects.GameObject;
 import com.company.practice3.game.objects.equipment.Equipment;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.jetbrains.annotations.NotNull;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -20,7 +19,7 @@ public abstract class Creature extends GameObject {
 
     double aps;
 
-    public Creature(String name, int hp, @NotNull Equipment equipment, int atk, double aps) {
+    public Creature(String name, int hp, Equipment equipment, int atk, double aps) {
         super(name);
         this.hp = hp;
         this.equipment = equipment;
@@ -43,4 +42,10 @@ public abstract class Creature extends GameObject {
         return getHp() > 0;
     }
 
+    public void setHp(int hp) {
+        if (hp > 100)
+            this.hp = 100;
+        else
+            this.hp = hp;
+    }
 }

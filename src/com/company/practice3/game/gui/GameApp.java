@@ -23,7 +23,7 @@ public class GameApp extends Application{
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Practice 3 game");
-        stage.getIcons().add(new Image(Objects.requireNonNull(GameApp.class.getResourceAsStream("icon.png"))));
+        stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon.png"))));
         stage.show();
     }
 
